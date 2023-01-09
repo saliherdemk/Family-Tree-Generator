@@ -27,7 +27,10 @@ class Draggable {
       this.x = mouseX + this.offsetX;
       this.y = mouseY + this.offsetY;
       if (this.spouse) {
-        this.spouse.x = this.spouse.x - this.x + mouseX + this.offsetX;
+        this.spouse.x =
+          this.x > this.spouse.x
+            ? this.x - 100 - this.spouse.w
+            : this.x + this.w + 100;
         this.spouse.y = this.y;
       }
     }

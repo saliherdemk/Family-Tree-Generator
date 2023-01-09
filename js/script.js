@@ -26,12 +26,17 @@ function prepData() {
 
   nodes.forEach((node) => {
     if (node.spouse) {
-      let newLink = new Link(node, node.spouse);
+      let newLink = new Link(node, node.spouse, "marriage");
       links.push(newLink);
+      if (node.children.length) {
+        let newLinkUp = new LinkUp(newLink);
+        links.push(newLinkUp);
+        node.setLinkUpToChildren(newLinkUp);
+      }
     }
 
     node.children.forEach((child) => {
-      let newLink = new Link(node, child);
+      let newLink = new Link(node.linkUpToChildren, child, "children");
       links.push(newLink);
     });
   });

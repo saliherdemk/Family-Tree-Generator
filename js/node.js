@@ -8,6 +8,7 @@ class Node extends Draggable {
     this.name = name;
     this.spouse = spouse;
     this.children = children;
+    this.linkUpToChildren = null;
   }
 
   setSpouse(node) {
@@ -18,9 +19,13 @@ class Node extends Draggable {
     this.children = children;
   }
 
+  setLinkUpToChildren(link) {
+    this.linkUpToChildren = link;
+  }
+
   draw() {
     rect(this.x, this.y, this.w, 80);
 
-    text(this.name, this.x, this.y);
+    text(this.name, this.x + 10, this.y + 40);
   }
 }
