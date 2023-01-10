@@ -28,11 +28,20 @@ class Circle {
   addChildren() {
     let parent1 = this.linkUp.sourceLink.source;
     let parent2 = this.linkUp.sourceLink.target;
-    let newChild = new Node(lastId + 1, this.x, this.y + 100, "name", null, []);
-    parent1.addChildren(newChild);
-    parent2.addChildren(newChild);
+    console.log(parent1, parent2);
+    let newChild = new Node(
+      crypto.randomUUID(),
+      this.x,
+      this.y + 100,
+      "name",
+      null,
+      []
+    );
+    let newLink = new Link(this, newChild, "children");
+    links.push(newLink);
+    newChild.addLink(newLink);
+
     nodes.push(newChild);
-    lastId += 1;
   }
 
   draw() {

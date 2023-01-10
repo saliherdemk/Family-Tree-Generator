@@ -8,7 +8,7 @@ class Node extends Draggable {
     this.h = 80;
     this.name = name;
     this.lived = "????-????";
-    this.spouse = spouse;
+    this.spouse = [spouse];
     this.children = children;
     this.linkUpToChildren = null;
     this.inputs = [];
@@ -24,7 +24,9 @@ class Node extends Draggable {
   initilize() {
     let inputHeight = 21;
     this.initilizeButton("Add Parent", "", () => console.log("asd"));
-    this.initilizeButton("Add Spouse", "", () => console.log("asd"));
+    this.initilizeButton("Add Spouse", "", () => {
+      this.addSpouse();
+    });
     this.initilizeButton("Delete", "", () => this.remove());
     this.initilizeButton("Close", "", () => this.hideButtons());
     this.initilizeInput(this.name, "textarea", (e) => {
@@ -51,6 +53,41 @@ class Node extends Draggable {
     this.inputs.push(input);
   }
 
+  addSpouse() {
+    let spouse = new Node(
+      crypto.randomUUID(),
+      this.x + 200,
+      this.y,
+      this.name + "spouse",
+      this,
+      []
+    );
+    let isLinkExists = links.find(
+      (link) =>
+        (link.source === this && link.target === spouse) ||
+        (link.source === spouse && link.target === this)
+    );
+
+    if (isLinkExists) return;
+
+    let newLink = new Link(this, spouse, "marriage");
+    links.push(newLink);
+    let newLinkUp = new LinkUp(newLink);
+    links.push(newLinkUp);
+
+    this.addLink(newLink);
+    this.addLink(newLinkUp);
+
+    this.linkUpToChildren = spouse.linkUpToChildren = newLinkUp;
+
+    let newCircle = new Circle(newLinkUp);
+    circles.push(newCircle);
+
+    newLinkUp.setCircle(newCircle);
+
+    nodes.push(spouse);
+  }
+
   initilizeButton(text, className, onPressed) {
     let button = createButton(text);
     button.position(this.x + this.w, this.y);
@@ -67,15 +104,16 @@ class Node extends Draggable {
     !this.links.includes(link) && this.links.push(link);
   }
 
-  setSpouse(node) {
-    this.spouse = node;
-    let isLinkExists = links.find(
-      (link) =>
-        (link.source === this && link.target === node) ||
-        (link.source === node && link.target === this)
+  addSpouse() {
+    let node = new Node(
+      crypto.randomUUID(),
+      this.x + 200,
+      this.y,
+      this.name + "spouse",
+      this,
+      []
     );
-
-    if (isLinkExists) return;
+    this.spouse.push(node);
 
     let newLink = new Link(this, node, "marriage");
     links.push(newLink);
@@ -91,18 +129,47 @@ class Node extends Draggable {
     circles.push(newCircle);
 
     newLinkUp.setCircle(newCircle);
+
+    nodes.push(node);
   }
+
+  // setSpouse(node) {
+  //   this.addSpouse(node);
+  //   let isLinkExists = links.find(
+  //     (link) =>
+  //       (link.source === this && link.target === node) ||
+  //       (link.source === node && link.target === this)
+  //   );
+
+  //   if (isLinkExists) return;
+
+  //   let newLink = new Link(this, node, "marriage");
+  //   links.push(newLink);
+  //   let newLinkUp = new LinkUp(newLink);
+  //   links.push(newLinkUp);
+
+  //   this.addLink(newLink);
+  //   this.addLink(newLinkUp);
+
+  //   this.linkUpToChildren = node.linkUpToChildren = newLinkUp;
+
+  //   let newCircle = new Circle(newLinkUp);
+  //   circles.push(newCircle);
+
+  //   newLinkUp.setCircle(newCircle);
+  // }
 
   setChildren(children) {
     this.children = children;
   }
 
-  addChildren(child) {
+  addChildren(child, spouse) {
     this.children.push(child);
-    this.parentLinkToChild(child);
+    this.parentLinkToChild(child, spouse);
   }
 
-  parentLinkToChild(child) {
+  parentLinkToChild(child, spouse) {
+    console.log(this.linkUpToChildren);
     let isLinkExists = links.find(
       (link) => link.source === this.linkUpToChildren && link.target === child
     );
@@ -110,7 +177,7 @@ class Node extends Draggable {
     let newLink = new Link(this.linkUpToChildren, child, "children");
     links.push(newLink);
     this.addLink(newLink);
-    this.spouse.addLink(newLink);
+    spouse.addLink(newLink);
   }
 
   draw() {
@@ -122,8 +189,8 @@ class Node extends Draggable {
 
     removeElement(nodes, this);
 
-    this.buttons.forEach((btn) => {
-      btn.remove();
+    [...this.buttons, ...this.inputs].forEach((el) => {
+      el.remove();
     });
 
     for (let i = 0; i < this.links.length; i++) {
