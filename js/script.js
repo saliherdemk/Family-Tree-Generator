@@ -1,13 +1,19 @@
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
 var nodes = [];
 var links = [];
-var drag;
+var circles = [];
+var designMode = true;
+var lastId = 0;
+const designBtn = document.getElementById("mode-btn");
 function prepData() {
   for (let i = 0; i < data.length; i++) {
     const element = data[i];
+    lastId = Math.max(lastId, element.id);
     let newNode = new Node(
       element.id,
-      i * 100,
-      50,
+      (i + 2) * 150,
+      element.depth * 100,
       element.name,
       element.spouseId,
       element.children
@@ -25,23 +31,53 @@ function prepData() {
   });
 
   nodes.forEach((node) => {
-    if (node.spouse) {
-      let newLink = new Link(node, node.spouse, "marriage");
-      links.push(newLink);
-      if (node.children.length) {
-        let newLinkUp = new LinkUp(newLink);
-        links.push(newLinkUp);
-        node.setLinkUpToChildren(newLinkUp);
-      }
-    }
-
     node.children.forEach((child) => {
-      let newLink = new Link(node.linkUpToChildren, child, "children");
-      links.push(newLink);
+      node.parentLinkToChild(child);
     });
   });
 }
 
 function findNodeById(id) {
   return nodes.find((node) => node.id === id);
+}
+
+function changeMode() {
+  if (designBtn.innerText === "Turn on Design Mode") {
+    designMode = true;
+    designBtn.innerText = "Turn off Design Mode";
+    return;
+  }
+  designMode = false;
+  designBtn.innerText = "Turn on Design Mode";
+}
+
+function updateNode(node) {
+  console.log(node);
+}
+
+function deleteNode(node) {
+  node.remove();
+  for (let i = 0; i < links.length; i++) {
+    const link = links[i];
+    if (
+      link?.source === node ||
+      link?.target === node ||
+      link?.sourceLink?.source === node ||
+      link?.sourceLink?.target === node
+    ) {
+      link.remove();
+    }
+  }
+}
+
+function removeElement(arr, el) {
+  const index = arr.indexOf(el);
+  if (index > -1) {
+    arr.splice(index, 1);
+  }
+}
+
+function addMember() {
+  let newNode = new Node(crypto.randomUUID(), 100, 100, "name", null, []);
+  nodes.push(newNode);
 }

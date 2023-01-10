@@ -2,3 +2,25 @@ body {
   margin: 0;
   padding: 0;
 }
+
+#mode-btn {
+  position: absolute;
+}
+
+.node-btn {
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.textarea {
+  text-align: center;
+}
+.node-input {
+  font-size: 1.1rem;
+}
