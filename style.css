@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #mode-btn {
@@ -10,8 +13,8 @@ body {
 .node-btn {
   color: white;
   border: 1px solid black;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 5px;
+  padding: 6px;
 }
 
 .hidden {
@@ -23,4 +26,8 @@ body {
 }
 .node-input {
   font-size: 1.1rem;
+}
+
+.disabled {
+  opacity: 0.3;
 }

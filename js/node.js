@@ -1,34 +1,39 @@
 class Node extends Draggable {
-  constructor(id, x, y, name, spouse, children = []) {
+  constructor(id, x, y, name, spouses = [], children = []) {
     super(x, y);
     this.id = id;
     this.x = x;
     this.y = y;
-    this.w = 175;
+    this.w = 180;
     this.h = 80;
     this.name = name;
     this.lived = "????-????";
-    this.spouse = [spouse];
+    this.spouses = spouses;
     this.children = children;
-    this.linkUpToChildren = null;
+    this.parents = [];
     this.inputs = [];
     this.buttons = [];
     this.links = [];
-    this.initilize();
   }
 
   resizeHeight(h) {
     this.h = 80 + h;
   }
 
-  initilize() {
+  initilize(link = null, parents = []) {
+    link && this.addLink(link);
+    this.parents = parents;
+
     let inputHeight = 21;
-    this.initilizeButton("Add Parent", "", () => console.log("asd"));
-    this.initilizeButton("Add Spouse", "", () => {
+
+    this.initilizeButton("Add Parent", this.parents.length, () =>
+      console.log("asd")
+    );
+    this.initilizeButton("Add Spouse", false, () => {
       this.addSpouse();
     });
-    this.initilizeButton("Delete", "", () => this.remove());
-    this.initilizeButton("Close", "", () => this.hideButtons());
+    this.initilizeButton("Delete", false, () => this.remove());
+    this.initilizeButton("Close", false, () => this.hideButtons());
     this.initilizeInput(this.name, "textarea", (e) => {
       this.name = e.target.innerText;
       let pxIncreased = e.target.offsetHeight - inputHeight;
@@ -47,51 +52,19 @@ class Node extends Draggable {
     let input = createElement("span", text);
     input.attribute("contenteditable", true);
     input.addClass(className);
-    input.addClass("node-input", "relative");
+    input.addClass("node-input");
     input.size(150);
     input.input(onChange);
     this.inputs.push(input);
   }
 
-  addSpouse() {
-    let spouse = new Node(
-      crypto.randomUUID(),
-      this.x + 200,
-      this.y,
-      this.name + "spouse",
-      this,
-      []
-    );
-    let isLinkExists = links.find(
-      (link) =>
-        (link.source === this && link.target === spouse) ||
-        (link.source === spouse && link.target === this)
-    );
-
-    if (isLinkExists) return;
-
-    let newLink = new Link(this, spouse, "marriage");
-    links.push(newLink);
-    let newLinkUp = new LinkUp(newLink);
-    links.push(newLinkUp);
-
-    this.addLink(newLink);
-    this.addLink(newLinkUp);
-
-    this.linkUpToChildren = spouse.linkUpToChildren = newLinkUp;
-
-    let newCircle = new Circle(newLinkUp);
-    circles.push(newCircle);
-
-    newLinkUp.setCircle(newCircle);
-
-    nodes.push(spouse);
-  }
-
-  initilizeButton(text, className, onPressed) {
+  initilizeButton(text, disabled, onPressed) {
     let button = createButton(text);
     button.position(this.x + this.w, this.y);
-    button.addClass(className);
+    if (disabled) {
+      button.attribute("disabled", "");
+      button.addClass("disabled");
+    }
     button.addClass("node-btn");
     button.addClass(`hidden`);
     button.mousePressed(() => {
@@ -104,89 +77,41 @@ class Node extends Draggable {
     !this.links.includes(link) && this.links.push(link);
   }
 
+  setParents(parents) {
+    this.parents = parents;
+  }
+
   addSpouse() {
     let node = new Node(
       crypto.randomUUID(),
       this.x + 200,
       this.y,
       this.name + "spouse",
-      this,
+      [this],
       []
     );
-    this.spouse.push(node);
+    this.spouses.push(node);
 
-    let newLink = new Link(this, node, "marriage");
+    let newLink = new Link(this, node, "marriage", this.spouses.length);
     links.push(newLink);
     let newLinkUp = new LinkUp(newLink);
-    links.push(newLinkUp);
+    linkUps.push(newLinkUp);
+
+    newLink.setLinkUp(newLinkUp);
 
     this.addLink(newLink);
-    this.addLink(newLinkUp);
-
-    this.linkUpToChildren = node.linkUpToChildren = newLinkUp;
-
-    let newCircle = new Circle(newLinkUp);
-    circles.push(newCircle);
-
-    newLinkUp.setCircle(newCircle);
+    node.initilize(newLink);
 
     nodes.push(node);
   }
 
-  // setSpouse(node) {
-  //   this.addSpouse(node);
-  //   let isLinkExists = links.find(
-  //     (link) =>
-  //       (link.source === this && link.target === node) ||
-  //       (link.source === node && link.target === this)
-  //   );
-
-  //   if (isLinkExists) return;
-
-  //   let newLink = new Link(this, node, "marriage");
-  //   links.push(newLink);
-  //   let newLinkUp = new LinkUp(newLink);
-  //   links.push(newLinkUp);
-
-  //   this.addLink(newLink);
-  //   this.addLink(newLinkUp);
-
-  //   this.linkUpToChildren = node.linkUpToChildren = newLinkUp;
-
-  //   let newCircle = new Circle(newLinkUp);
-  //   circles.push(newCircle);
-
-  //   newLinkUp.setCircle(newCircle);
-  // }
-
-  setChildren(children) {
-    this.children = children;
-  }
-
-  addChildren(child, spouse) {
-    this.children.push(child);
-    this.parentLinkToChild(child, spouse);
-  }
-
-  parentLinkToChild(child, spouse) {
-    console.log(this.linkUpToChildren);
-    let isLinkExists = links.find(
-      (link) => link.source === this.linkUpToChildren && link.target === child
-    );
-    if (isLinkExists) return;
-    let newLink = new Link(this.linkUpToChildren, child, "children");
-    links.push(newLink);
-    this.addLink(newLink);
-    spouse.addLink(newLink);
-  }
-
   draw() {
+    designMode && this.update();
+    designMode && this.over();
     rect(this.x, this.y, this.w, this.h);
   }
 
   remove() {
-    this.linkUpToChildren?.remove();
-
     removeElement(nodes, this);
 
     [...this.buttons, ...this.inputs].forEach((el) => {
@@ -195,7 +120,7 @@ class Node extends Draggable {
 
     for (let i = 0; i < this.links.length; i++) {
       const link = this.links[i];
-      link.remove();
+      link.remove(true);
     }
   }
 }

@@ -12,18 +12,14 @@ function draw() {
     link.draw();
   }
 
-  for (let i = 0; i < nodes.length; i++) {
-    const node = nodes[i];
-
-    designMode && node.update();
-    designMode && node.over();
-    node.draw();
+  for (let i = 0; i < linkUps.length; i++) {
+    const linkUp = linkUps[i];
+    linkUp.draw();
   }
 
-  for (let i = 0; i < circles.length; i++) {
-    const circle = circles[i];
-    designMode && circle.over();
-    circle.draw();
+  for (let i = 0; i < nodes.length; i++) {
+    const node = nodes[i];
+    node.draw();
   }
 }
 
@@ -33,9 +29,9 @@ function mousePressed() {
     node.pressed();
   }
 
-  for (let i = 0; i < circles.length; i++) {
-    const circle = circles[i];
-    circle.pressed();
+  for (let i = 0; i < linkUps.length; i++) {
+    const linkUp = linkUps[i];
+    linkUp.pressed();
   }
 }
 
@@ -51,4 +47,8 @@ function doubleClicked() {
     const node = nodes[i];
     node.updateNode();
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

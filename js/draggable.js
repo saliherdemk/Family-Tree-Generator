@@ -23,36 +23,42 @@ class Draggable {
   }
 
   update() {
+    let isFilled = nodes.find(
+      (node) => dist(node.x, node.y, this.x, this.y) < 20 && node !== this
+    );
+    if (isFilled) this.x += 200;
+
     if (this.dragging) {
       this.x = mouseX + this.offsetX;
       this.y = mouseY + this.offsetY;
-      if (this.spouse) {
-        this.spouse.y = this.y;
-      }
+
+      this.spouses.forEach((spouse) => {
+        spouse.y = this.y;
+      });
     }
-    var btnPositions = [
+    var btnAttrs = [
       [0, -30, "#22c55e"],
       [0, this.h + 5, "#38bdf8"],
       [this.w - 48, this.h + 5, "#f43f5e"],
       [this.w - 48, -30, "#78716c"],
     ];
 
-    var positions = [
+    var inpAttrs = [
       [12, 10, "transparent"],
       [12, this.h - 25, "transparent"],
     ];
 
     for (let i = 0; i < this.buttons.length; i++) {
       const button = this.buttons[i];
-      button.position(this.x + btnPositions[i][0], this.y + btnPositions[i][1]);
-      button.style("background-color", btnPositions[i][2]);
+      button.position(this.x + btnAttrs[i][0], this.y + btnAttrs[i][1]);
+      button.style("background-color", btnAttrs[i][2]);
     }
 
     for (let i = 0; i < this.inputs.length; i++) {
       const input = this.inputs[i];
-      let y = i === 0 ? positions[i][1] : this.h - 5 - input.elt.clientHeight;
-      input.position(this.x + positions[i][0], this.y + y);
-      input.style("background-color", positions[i][2]);
+      let y = i === 0 ? inpAttrs[i][1] : this.h - 5 - input.elt.clientHeight;
+      input.position(this.x + inpAttrs[i][0], this.y + y);
+      input.style("background-color", inpAttrs[i][2]);
     }
   }
 
@@ -66,12 +72,6 @@ class Draggable {
     this.buttons.forEach((btn) => {
       btn.addClass("hidden");
     });
-  }
-
-  updateNode() {
-    if (this.rollover) {
-      console.log(this.name);
-    }
   }
 
   pressed() {

@@ -2,6 +2,7 @@ document.addEventListener("contextmenu", (event) => event.preventDefault());
 
 var nodes = [];
 var links = [];
+var linkUps = [];
 var circles = [];
 var designMode = true;
 var lastId = 0;
@@ -78,6 +79,11 @@ function removeElement(arr, el) {
 }
 
 function addMember() {
-  let newNode = new Node(crypto.randomUUID(), 100, 100, "name", null, []);
+  let newNode = new Node(crypto.randomUUID(), 100, 100, "name", [], []);
+  newNode.initilize();
   nodes.push(newNode);
+}
+
+function dist(x1, y1, x2, y2) {
+  return (x2 - x1) ** 2 + (y2 - y1) ** 2;
 }
