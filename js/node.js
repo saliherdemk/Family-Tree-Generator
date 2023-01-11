@@ -61,7 +61,7 @@ class Node extends Draggable {
     let parent1 = new Node(
       crypto.randomUUID(),
       this.x - 200,
-      this.y - 100,
+      this.y - 200,
       "name",
       [],
       [this]
@@ -101,20 +101,25 @@ class Node extends Draggable {
     nodes.push(node);
   }
 
-  draw() {
-    designMode && this.update();
-    designMode && this.over();
+  drawText(content, x, y, w) {
     fill(0);
     textSize(18);
     textAlign(CENTER);
     textWrap(WORD);
-    text(this.name, this.x, this.y + this.h / 4, this.w);
-    text(this.lived, this.x, this.y + this.h - 20, this.w);
+    text(content, x, y, w);
+    fill(255);
+  }
 
-    noFill();
-    rect(this.x, this.y, this.w, this.h);
+  draw() {
+    designMode && this.update();
+    designMode && this.over();
 
     fill(255);
+
+    rect(this.x, this.y, this.w, this.h);
+
+    this.drawText(this.name, this.x, this.y + this.h / 4, this.w);
+    this.drawText(this.lived, this.x, this.y + this.h - 20, this.w);
   }
 
   remove() {

@@ -70,14 +70,6 @@ body {
   display: none;
 }
 
-.textarea {
-  text-align: center;
-}
-.node-input {
-  position: relative;
-  font-size: 1.1rem;
-}
-
 .disabled {
   opacity: 0.3;
 }
@@ -127,6 +119,7 @@ body {
   margin: 10px;
 }
 
+/* https://codepen.io/avstorm/pen/gKGbxo */
 .inp {
   position: relative;
   max-width: 280px;

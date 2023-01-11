@@ -1,4 +1,4 @@
-// document.addEventListener("contextmenu", (event) => event.preventDefault());
+document.addEventListener("contextmenu", (event) => event.preventDefault());
 const graph = document.querySelector("#graph");
 function prepData() {
   for (let i = 0; i < data.length; i++) {

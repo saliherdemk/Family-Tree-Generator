@@ -3,10 +3,6 @@ class Draggable {
     this.dragging = false;
     this.rollover = false;
     this.buttonsIsShown = false;
-    this.x = 100;
-    this.y = 100;
-    this.w = 75;
-    this.h = 80;
   }
 
   over() {
@@ -45,8 +41,10 @@ class Draggable {
     this.lived = date.substring(0, 9);
 
     let newNameBoxHeight = Math.floor(name.trim().length / 18 - 0.01) * 20;
+    let newWidth = this.name.split(" ")[0].length * 10;
 
-    this.h += newNameBoxHeight;
+    this.h = 100 + newNameBoxHeight;
+    this.w = Math.max(newWidth, 180);
   }
 
   update() {
@@ -74,13 +72,6 @@ class Draggable {
       button.position(this.x + btnAttrs[i][0], this.y + btnAttrs[i][1]);
       button.style("background-color", btnAttrs[i][2]);
     }
-
-    // for (let i = 0; i < this.inputs.length; i++) {
-    //   const input = this.inputs[i];
-    //   let y = i === 0 ? inpAttrs[i][1] : this.h - 5 - input.elt.clientHeight;
-    //   input.position(this.x + inpAttrs[i][0], this.y + y);
-    //   input.style("background-color", inpAttrs[i][2]);
-    // }
   }
 
   showButtons() {
