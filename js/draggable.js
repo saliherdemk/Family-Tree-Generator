@@ -42,7 +42,11 @@ class Draggable {
 
   nodeUpdate(name, date) {
     this.name = name;
-    this.date = date;
+    this.lived = date.substring(0, 9);
+
+    let newNameBoxHeight = Math.floor(name.trim().length / 18 - 0.01) * 20;
+
+    this.h += newNameBoxHeight;
   }
 
   update() {

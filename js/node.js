@@ -24,8 +24,6 @@ class Node extends Draggable {
     link && this.addLink(link);
     this.parents = parents;
 
-    let inputHeight = 21;
-
     this.initilizeButton("Add Parent", this.parents.length, () =>
       this.addParents()
     );
@@ -34,29 +32,7 @@ class Node extends Draggable {
     });
     this.initilizeButton("Delete", false, () => this.remove());
     this.initilizeButton("Close", false, () => this.hideButtons());
-    // this.initilizeInput(this.name, "textarea", (e) => {
-    //   this.name = e.target.innerText;
-    //   let pxIncreased = e.target.offsetHeight - inputHeight;
-
-    //   this.h !== 80 + pxIncreased && this.resizeHeight(pxIncreased);
-    // });
-    // this.initilizeInput("????-????", "textarea", (e) => {
-    //   this.lived = e.target.innerText;
-    //   let pxIncreased = e.target.offsetHeight - inputHeight;
-
-    //   this.h !== 80 + pxIncreased && this.resizeHeight(pxIncreased);
-    // });
   }
-
-  // initilizeInput(text, className, onChange) {
-  //   let input = createElement("span", text);
-  //   input.attribute("contenteditable", true);
-  //   input.addClass(className);
-  //   input.addClass("node-input");
-  //   input.size(150);
-  //   input.input(onChange);
-  //   this.inputs.push(input);
-  // }
 
   initilizeButton(text, disabled, onPressed) {
     let button = createButton(text);
@@ -86,7 +62,7 @@ class Node extends Draggable {
       crypto.randomUUID(),
       this.x - 200,
       this.y - 100,
-      this.name + "parent1",
+      "name",
       [],
       [this]
     );
@@ -106,7 +82,7 @@ class Node extends Draggable {
       crypto.randomUUID(),
       this.x + 200,
       this.y,
-      this.name + "spouse",
+      "name",
       [this],
       []
     );
@@ -128,11 +104,16 @@ class Node extends Draggable {
   draw() {
     designMode && this.update();
     designMode && this.over();
-    rect(this.x, this.y, this.w, this.h);
     fill(0);
+    textSize(18);
     textAlign(CENTER);
     textWrap(WORD);
     text(this.name, this.x, this.y + this.h / 4, this.w);
+    text(this.lived, this.x, this.y + this.h - 20, this.w);
+
+    noFill();
+    rect(this.x, this.y, this.w, this.h);
+
     fill(255);
   }
 

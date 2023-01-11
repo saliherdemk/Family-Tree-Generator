@@ -72,7 +72,7 @@ function removeElement(arr, el) {
 }
 
 function addMember() {
-  let newNode = new Node(crypto.randomUUID(), 100, 100, "name", [], []);
+  let newNode = new Node(crypto.randomUUID(), 200, 100, "name", [], []);
   newNode.initilize();
   nodes.push(newNode);
 }
@@ -83,7 +83,7 @@ function dist(x1, y1, x2, y2) {
 
 function openPopup() {
   nameInp.value = selectedElementForUpdate.name;
-  dateInp.value = selectedElementForUpdate.date;
+  dateInp.value = selectedElementForUpdate.lived;
 
   document.querySelector(".popup-container").style.display = "flex";
 }
@@ -97,4 +97,32 @@ function closePopup() {
   nameInp.value = "";
   dateInp.value = "";
   document.querySelector(".popup-container").style.display = "none";
+}
+
+function toggleMenu() {
+  document.querySelector(".menu-items-container").classList.toggle("hide-menu");
+  document.querySelector(".menu-items-container").classList.toggle("show-menu");
+}
+
+function handleSave(type) {
+  if (type === "image") {
+    saveCanvas(canvas, "My_Family_Tree", "png");
+    return;
+  }
+
+  let jsonData = {
+    nodes: nodes,
+    links: links,
+    linkUps: linkUps,
+  };
+
+  download(JSON.stringify(jsonData), "yourfile.json", "text/plain");
+}
+
+function download(content, fileName, contentType) {
+  const a = document.createElement("a");
+  const file = new Blob([content], { type: contentType });
+  a.href = URL.createObjectURL(file);
+  a.download = fileName;
+  a.click();
 }

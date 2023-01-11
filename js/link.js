@@ -27,13 +27,6 @@ class Link {
       vertex(this.target.x + this.target.w / 2, this.target.y + this.target.h);
 
       endShape();
-
-      // line(
-      //   this.source.x + 25,
-      //   this.source.y + 40,
-      //   this.target.x + 25,
-      //   this.target.y + 40
-      // );
     } else if (this.type === "children") {
       beginShape();
       vertex(this.source.x, this.source.y);

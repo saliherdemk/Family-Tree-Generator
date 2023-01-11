@@ -10,11 +10,53 @@ body {
   font-family: "Poppins";
 }
 
-.mode-btn {
+.options {
   position: fixed;
-  width: 10vh;
-  height: 10vh;
-  font-size: 3vh;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+}
+
+.btn {
+  width: 150px;
+  padding: 15px;
+  font-size: medium;
+  border-radius: 10px;
+  margin: 10px;
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+
+#menu-btn{
+  background-color: #f43f5e;
+}
+
+#add-member-btn{
+  background-color: #16a34a;
+}
+
+#import-btn{
+  background-color: #279baf;
+}
+
+.save-btn{
+  background-color: #1d4ed8;
+}
+
+.menu-items-container {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.hide-menu{
+  height: 0px;
+}
+
+.show-menu{
+  height: 275px;
 }
 
 .node-btn {

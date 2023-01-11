@@ -9,7 +9,22 @@
   </head>
   <body>
     <!-- <button onclick="changeMode()" id="mode-btn">Turn on Design Mode</button> -->
-    <button onclick="addMember()" class="mode-btn">add</button>
+
+    <div class="options">
+      <div class="menu-items-container hide-menu">
+        <button onclick="addMember()" class="btn" id="add-member-btn">
+          Add Member
+        </button>
+        <button onclick="addMember()" class="btn" id="import-btn">
+          Import Json
+        </button>
+        <button onclick="handleSave('image')" class="btn save-btn">
+          Save as Image
+        </button>
+        <button onclick="handleSave('json')" class="btn save-btn">Save as Json</button>
+      </div>
+      <button class="btn" id="menu-btn" onclick="toggleMenu()">Menu</button>
+    </div>
 
     <div class="popup-container">
       <div class="popup-input">
