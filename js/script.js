@@ -1,4 +1,4 @@
-document.addEventListener("contextmenu", (event) => event.preventDefault());
+// document.addEventListener("contextmenu", (event) => event.preventDefault());
 const graph = document.querySelector("#graph");
 function prepData() {
   for (let i = 0; i < data.length; i++) {
@@ -79,4 +79,22 @@ function addMember() {
 
 function dist(x1, y1, x2, y2) {
   return (x2 - x1) ** 2 + (y2 - y1) ** 2;
+}
+
+function openPopup() {
+  nameInp.value = selectedElementForUpdate.name;
+  dateInp.value = selectedElementForUpdate.date;
+
+  document.querySelector(".popup-container").style.display = "flex";
+}
+
+function handlePopupInput() {
+  selectedElementForUpdate.nodeUpdate(nameInp.value, dateInp.value);
+  closePopup();
+}
+
+function closePopup() {
+  nameInp.value = "";
+  dateInp.value = "";
+  document.querySelector(".popup-container").style.display = "none";
 }

@@ -7,8 +7,6 @@ class Draggable {
     this.y = 100;
     this.w = 75;
     this.h = 80;
-    this.prevX = null;
-    this.prevY = null;
   }
 
   over() {
@@ -31,9 +29,20 @@ class Draggable {
 
       this.spouses.forEach((spouse) => {
         spouse.y = this.y;
-        spouse.prevY = spouse.y;
       });
     }
+  }
+
+  specifyElement() {
+    if (this.rollover) {
+      selectedElementForUpdate = this;
+      openPopup();
+    }
+  }
+
+  nodeUpdate(name, date) {
+    this.name = name;
+    this.date = date;
   }
 
   update() {
@@ -62,12 +71,12 @@ class Draggable {
       button.style("background-color", btnAttrs[i][2]);
     }
 
-    for (let i = 0; i < this.inputs.length; i++) {
-      const input = this.inputs[i];
-      let y = i === 0 ? inpAttrs[i][1] : this.h - 5 - input.elt.clientHeight;
-      input.position(this.x + inpAttrs[i][0], this.y + y);
-      input.style("background-color", inpAttrs[i][2]);
-    }
+    // for (let i = 0; i < this.inputs.length; i++) {
+    //   const input = this.inputs[i];
+    //   let y = i === 0 ? inpAttrs[i][1] : this.h - 5 - input.elt.clientHeight;
+    //   input.position(this.x + inpAttrs[i][0], this.y + y);
+    //   input.style("background-color", inpAttrs[i][2]);
+    // }
   }
 
   showButtons() {

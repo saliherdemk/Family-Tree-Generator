@@ -34,29 +34,29 @@ class Node extends Draggable {
     });
     this.initilizeButton("Delete", false, () => this.remove());
     this.initilizeButton("Close", false, () => this.hideButtons());
-    this.initilizeInput(this.name, "textarea", (e) => {
-      this.name = e.target.innerText;
-      let pxIncreased = e.target.offsetHeight - inputHeight;
+    // this.initilizeInput(this.name, "textarea", (e) => {
+    //   this.name = e.target.innerText;
+    //   let pxIncreased = e.target.offsetHeight - inputHeight;
 
-      this.h !== 80 + pxIncreased && this.resizeHeight(pxIncreased);
-    });
-    this.initilizeInput("????-????", "textarea", (e) => {
-      this.lived = e.target.innerText;
-      let pxIncreased = e.target.offsetHeight - inputHeight;
+    //   this.h !== 80 + pxIncreased && this.resizeHeight(pxIncreased);
+    // });
+    // this.initilizeInput("????-????", "textarea", (e) => {
+    //   this.lived = e.target.innerText;
+    //   let pxIncreased = e.target.offsetHeight - inputHeight;
 
-      this.h !== 80 + pxIncreased && this.resizeHeight(pxIncreased);
-    });
+    //   this.h !== 80 + pxIncreased && this.resizeHeight(pxIncreased);
+    // });
   }
 
-  initilizeInput(text, className, onChange) {
-    let input = createElement("span", text);
-    input.attribute("contenteditable", true);
-    input.addClass(className);
-    input.addClass("node-input");
-    input.size(150);
-    input.input(onChange);
-    this.inputs.push(input);
-  }
+  // initilizeInput(text, className, onChange) {
+  //   let input = createElement("span", text);
+  //   input.attribute("contenteditable", true);
+  //   input.addClass(className);
+  //   input.addClass("node-input");
+  //   input.size(150);
+  //   input.input(onChange);
+  //   this.inputs.push(input);
+  // }
 
   initilizeButton(text, disabled, onPressed) {
     let button = createButton(text);
@@ -129,6 +129,11 @@ class Node extends Draggable {
     designMode && this.update();
     designMode && this.over();
     rect(this.x, this.y, this.w, this.h);
+    fill(0);
+    textAlign(CENTER);
+    textWrap(WORD);
+    text(this.name, this.x, this.y + this.h / 4, this.w);
+    fill(255);
   }
 
   remove() {
