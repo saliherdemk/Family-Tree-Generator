@@ -1,12 +1,5 @@
 document.addEventListener("contextmenu", (event) => event.preventDefault());
-
-var nodes = [];
-var links = [];
-var linkUps = [];
-var circles = [];
-var designMode = true;
-var lastId = 0;
-const designBtn = document.getElementById("mode-btn");
+const graph = document.querySelector("#graph");
 function prepData() {
   for (let i = 0; i < data.length; i++) {
     const element = data[i];

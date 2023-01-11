@@ -1,9 +1,15 @@
+let offset;
 function setup() {
-  createCanvas(windowWidth, windowHeight - 4);
+  let cnv = createCanvas(9000, 9000);
+  offset = createVector(0, 0);
+
   // prepData();
 }
 
 function draw() {
+  const mouse = createVector(mouseX, mouseY);
+  const relativeMouse = mouse.copy().sub(offset);
+
   strokeWeight(2);
   background(255);
 
@@ -20,6 +26,14 @@ function draw() {
   for (let i = 0; i < nodes.length; i++) {
     const node = nodes[i];
     node.draw();
+  }
+
+  if (mouseIsPressed && mouseButton === RIGHT) {
+    offset.x -= pmouseX - mouseX;
+    offset.y -= pmouseY - mouseY;
+    for (let i = 0; i < nodes.length; i++) {
+      nodes[i].updateCoordinates(true);
+    }
   }
 }
 
@@ -47,8 +61,4 @@ function doubleClicked() {
     const node = nodes[i];
     node.updateNode();
   }
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
 }

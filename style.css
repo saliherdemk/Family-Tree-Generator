@@ -4,10 +4,14 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  overflow: hidden;
 }
 
-#mode-btn {
-  position: absolute;
+.mode-btn {
+  position: fixed;
+  width: 10vh;
+  height: 10vh;
+  font-size: 3vh;
 }
 
 .node-btn {

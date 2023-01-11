@@ -76,25 +76,20 @@ class LinkUp {
     this.links.push(link);
   }
 
-  addChildren() {
+  addChildren(ch = null) {
     let parent1 = this.sourceLink.source;
     let parent2 = this.sourceLink.target;
 
-    let newChild = new Node(
-      crypto.randomUUID(),
-      this.x,
-      this.y + 100,
-      "name",
-      [],
-      []
-    );
+    let newChild = ch
+      ? ch
+      : new Node(crypto.randomUUID(), this.x, this.y + 100, "name", [], []);
     let newLink = new Link(this, newChild, "children");
     links.push(newLink);
-    newChild.initilize(newLink, [parent1, parent2]);
-
+    !ch && newChild.initilize(newLink, [parent1, parent2]);
+    ch && ch.addLink(newLink);
     this.addLink(newLink);
 
-    nodes.push(newChild);
+    !ch && nodes.push(newChild);
   }
 
   update() {

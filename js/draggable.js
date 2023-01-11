@@ -7,6 +7,8 @@ class Draggable {
     this.y = 100;
     this.w = 75;
     this.h = 80;
+    this.prevX = null;
+    this.prevY = null;
   }
 
   over() {
@@ -22,20 +24,19 @@ class Draggable {
     }
   }
 
-  update() {
-    let isFilled = nodes.find(
-      (node) => dist(node.x, node.y, this.x, this.y) < 20 && node !== this
-    );
-    if (isFilled) this.x += 200;
-
+  updateCoordinates() {
     if (this.dragging) {
       this.x = mouseX + this.offsetX;
       this.y = mouseY + this.offsetY;
 
       this.spouses.forEach((spouse) => {
         spouse.y = this.y;
+        spouse.prevY = spouse.y;
       });
     }
+  }
+
+  update() {
     var btnAttrs = [
       [0, -30, "#22c55e"],
       [0, this.h + 5, "#38bdf8"],
@@ -47,6 +48,13 @@ class Draggable {
       [12, 10, "transparent"],
       [12, this.h - 25, "transparent"],
     ];
+
+    let isFilled = nodes.find(
+      (node) => dist(node.x, node.y, this.x, this.y) < 20 && node !== this
+    );
+    if (isFilled) this.x += 200;
+
+    this.updateCoordinates();
 
     for (let i = 0; i < this.buttons.length; i++) {
       const button = this.buttons[i];

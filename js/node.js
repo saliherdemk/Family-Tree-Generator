@@ -27,7 +27,7 @@ class Node extends Draggable {
     let inputHeight = 21;
 
     this.initilizeButton("Add Parent", this.parents.length, () =>
-      console.log("asd")
+      this.addParents()
     );
     this.initilizeButton("Add Spouse", false, () => {
       this.addSpouse();
@@ -81,7 +81,27 @@ class Node extends Draggable {
     this.parents = parents;
   }
 
-  addSpouse() {
+  addParents() {
+    let parent1 = new Node(
+      crypto.randomUUID(),
+      this.x - 200,
+      this.y - 100,
+      this.name + "parent1",
+      [],
+      [this]
+    );
+
+    parent1.addSpouse();
+    parent1.initilize();
+    parent1.links[0].linkUp.addChildren(this);
+    nodes.push(parent1);
+
+    this.buttons[0].attribute("disabled", "");
+    this.buttons[0].addClass("disabled");
+  }
+
+  addSpouse(sp = null) {
+    sp && this.spouses.push(sp);
     let node = new Node(
       crypto.randomUUID(),
       this.x + 200,
