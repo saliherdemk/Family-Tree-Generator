@@ -8,3 +8,5 @@ var canvasDragging = false;
 const designBtn = document.getElementById("mode-btn");
 const nameInp = document.getElementById("name-inp");
 const dateInp = document.getElementById("date-inp");
+const menuItemsContainer = document.querySelector(".menu-items-container");
+const popupContainer = document.querySelector(".popup-container");

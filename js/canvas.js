@@ -1,30 +1,19 @@
 function setup() {
+  document.addEventListener("contextmenu", (event) => event.preventDefault());
   canvas = createCanvas(windowWidth, windowHeight);
-
-  // prepData();
 }
 
 function draw() {
   strokeWeight(2);
   background(255);
 
-  for (let i = 0; i < nodes.length; i++) {
-    const node = nodes[i];
-    node.draw();
-  }
+  drawAction(nodes);
 
   fill(255);
-  for (let i = 0; i < linkUps.length; i++) {
-    const linkUp = linkUps[i];
-    linkUp.draw();
-  }
+  drawAction(linkUps);
 
   noFill();
-
-  for (let i = 0; i < links.length; i++) {
-    const link = links[i];
-    link.draw();
-  }
+  drawAction(links);
 
   fill(255);
   for (let i = 0; i < linkUps.length; i++) {
@@ -41,15 +30,8 @@ function draw() {
 }
 
 function mousePressed() {
-  for (let i = 0; i < nodes.length; i++) {
-    const node = nodes[i];
-    node.pressed();
-  }
-
-  for (let i = 0; i < linkUps.length; i++) {
-    const linkUp = linkUps[i];
-    linkUp.pressed();
-  }
+  pressedAction(nodes);
+  pressedAction(linkUps);
 
   canvasDragging = mouseButton === RIGHT;
 }
