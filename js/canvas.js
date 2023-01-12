@@ -8,19 +8,35 @@ function draw() {
   strokeWeight(2);
   background(255);
 
-  for (let i = 0; i < links.length; i++) {
-    const link = links[i];
-    link.draw();
+  for (let i = 0; i < nodes.length; i++) {
+    const node = nodes[i];
+    node.draw();
   }
 
+  fill(255);
   for (let i = 0; i < linkUps.length; i++) {
     const linkUp = linkUps[i];
     linkUp.draw();
   }
 
-  for (let i = 0; i < nodes.length; i++) {
-    const node = nodes[i];
-    node.draw();
+  noFill();
+
+  for (let i = 0; i < links.length; i++) {
+    const link = links[i];
+    link.draw();
+  }
+
+  fill(255);
+  for (let i = 0; i < linkUps.length; i++) {
+    const linkUp = linkUps[i];
+    linkUp.drawCircle();
+  }
+
+  if (mouseButton === RIGHT) {
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
+      node.updateCoordinates(true);
+    }
   }
 }
 
@@ -34,6 +50,8 @@ function mousePressed() {
     const linkUp = linkUps[i];
     linkUp.pressed();
   }
+
+  canvasDragging = mouseButton === RIGHT;
 }
 
 function mouseReleased() {
@@ -41,6 +59,7 @@ function mouseReleased() {
     const node = nodes[i];
     node.released();
   }
+  canvasDragging = false;
 }
 
 function doubleClicked() {

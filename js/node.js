@@ -114,8 +114,6 @@ class Node extends Draggable {
     designMode && this.update();
     designMode && this.over();
 
-    fill(255);
-
     rect(this.x, this.y, this.w, this.h);
 
     this.drawText(this.name, this.x, this.y + this.h / 4, this.w);

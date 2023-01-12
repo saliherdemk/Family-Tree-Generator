@@ -13,7 +13,6 @@ class Link {
 
   draw() {
     if (this.type === "marriage") {
-      noFill();
       beginShape();
       vertex(this.source.x + this.source.w / 2, this.source.y + this.source.h);
       vertex(
@@ -98,12 +97,14 @@ class LinkUp {
       40;
   }
 
+  drawCircle() {
+    circle(this.x, this.y, this.r);
+  }
+
   draw() {
-    fill(255);
     this.over();
     this.update();
     line(this.x, this.y, this.x, this.y - 40);
-    circle(this.x, this.y, this.r);
   }
 
   remove() {

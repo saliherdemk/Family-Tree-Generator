@@ -3,6 +3,10 @@ class Draggable {
     this.dragging = false;
     this.rollover = false;
     this.buttonsIsShown = false;
+    this.offsetX;
+    this.offsetY;
+    this.globOffsetX;
+    this.globOffsetY;
   }
 
   over() {
@@ -19,6 +23,10 @@ class Draggable {
   }
 
   updateCoordinates() {
+    if (canvasDragging) {
+      this.x = mouseX + this.globOffsetX;
+      this.y = mouseY + this.globOffsetY;
+    }
     if (this.dragging) {
       this.x = mouseX + this.offsetX;
       this.y = mouseY + this.offsetY;
@@ -53,11 +61,6 @@ class Draggable {
       [0, this.h + 5, "#38bdf8"],
       [this.w - 48, this.h + 5, "#f43f5e"],
       [this.w - 48, -30, "#78716c"],
-    ];
-
-    var inpAttrs = [
-      [12, 10, "transparent"],
-      [12, this.h - 25, "transparent"],
     ];
 
     let isFilled = nodes.find(
@@ -100,6 +103,9 @@ class Draggable {
         this.showButtons();
       }
     }
+
+    this.globOffsetX = this.x - mouseX;
+    this.globOffsetY = this.y - mouseY;
   }
 
   released() {
