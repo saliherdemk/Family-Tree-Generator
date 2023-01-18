@@ -69,8 +69,10 @@ function closePopup() {
 }
 
 function toggleMenu() {
-  menuItemsContainer.classList.toggle("hide-menu");
-  menuItemsContainer.classList.toggle("show-menu");
+  let btns = Object.values(menuBtns).slice(0, -1);
+  btns.forEach((btn) => {
+    btn.classList.toggle("show-btn");
+  });
 }
 
 function handleSave(type) {
