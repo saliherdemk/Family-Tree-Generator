@@ -24,13 +24,18 @@ class Node extends Draggable {
     link && this.addLink(link);
     this.parents = parents;
 
-    this.initilizeButton("Add Parent", this.parents.length, () =>
-      this.addParents()
-    );
+    this.initilizeButton("Add Parent", this.parents.length, () => {
+      this.addParents();
+      this.hideButtons();
+    });
     this.initilizeButton("Add Spouse", false, () => {
       this.addSpouse();
+      this.hideButtons();
     });
-    this.initilizeButton("Delete", false, () => this.remove());
+    this.initilizeButton("Delete", false, () => {
+      this.remove();
+      this.hideButtons();
+    });
     this.initilizeButton("Close", false, () => this.hideButtons());
   }
 
