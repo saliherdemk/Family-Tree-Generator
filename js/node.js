@@ -110,10 +110,12 @@ class Node extends Draggable {
     fill(255);
   }
 
-  draw() {
+  preDraw() {
     designMode && this.update();
     designMode && this.over();
+  }
 
+  draw() {
     rect(this.x, this.y, this.w, this.h);
 
     this.drawText(this.name, this.x, this.y + this.h / 4, this.w);

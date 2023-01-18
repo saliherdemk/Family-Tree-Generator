@@ -7,19 +7,20 @@ function draw() {
   strokeWeight(2);
   background(255);
 
-  drawAction(nodes);
+  preDrawAction(nodes);
 
   fill(255);
-  drawAction(linkUps);
+
+  preDrawAction(linkUps);
 
   noFill();
   drawAction(links);
 
   fill(255);
-  for (let i = 0; i < linkUps.length; i++) {
-    const linkUp = linkUps[i];
-    linkUp.drawCircle();
-  }
+
+  drawAction(nodes);
+
+  drawAction(linkUps);
 
   if (mouseButton === RIGHT) {
     for (let i = 0; i < nodes.length; i++) {
@@ -49,4 +50,8 @@ function doubleClicked() {
     const node = nodes[i];
     node.specifyElement();
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

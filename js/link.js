@@ -97,14 +97,14 @@ class LinkUp {
       40;
   }
 
-  drawCircle() {
-    circle(this.x, this.y, this.r);
-  }
-
-  draw() {
+  preDraw() {
     this.over();
     this.update();
     line(this.x, this.y, this.x, this.y - 40);
+  }
+
+  draw() {
+    circle(this.x, this.y, this.r);
   }
 
   remove() {

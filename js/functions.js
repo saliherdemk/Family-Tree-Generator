@@ -1,3 +1,9 @@
+function preDrawAction(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].preDraw();
+  }
+}
+
 function drawAction(arr) {
   for (let i = 0; i < arr.length; i++) {
     arr[i].draw();
