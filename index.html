@@ -15,9 +15,8 @@
         <button onclick="addMember()" class="btn" id="add-member-btn">
           Add Member
         </button>
-        <button onclick="addMember()" class="btn" id="import-btn">
-          Import Json
-        </button>
+          <input id='fileid' type='file' hidden accept="application/JSON" onchange="importJson(event)"/>
+          <input type="button" class="btn" id="import-btn" value="Import Json" onclick="trigger()">
         <button onclick="handleSave('image')" class="btn save-btn">
           Save as Image
         </button>

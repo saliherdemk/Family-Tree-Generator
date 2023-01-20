@@ -22,6 +22,10 @@ class Draggable {
     }
   }
 
+  updateHeight() {
+    this.y += this.depth * 300;
+  }
+
   updateCoordinates() {
     if (canvasDragging) {
       this.x = mouseX + this.globOffsetX;

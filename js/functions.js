@@ -76,21 +76,48 @@ function toggleMenu() {
   });
 }
 
+function trigger() {
+  document.getElementById("fileid").click();
+}
+async function importJson(e) {
+  const object = await parseJsonFile(e.target.files[0]);
+  console.log(object);
+}
+
+async function parseJsonFile(file) {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.onload = (event) => resolve(JSON.parse(event.target.result));
+    fileReader.onerror = (error) => reject(error);
+    fileReader.readAsText(file);
+  });
+}
+
 function handleSave(type) {
   if (type === "image") {
     saveCanvas(canvas, "My_Family_Tree", "png");
     return;
   }
 
-  console.log(nodes);
+  var obj = [];
 
-  // let jsonData = {
-  //   nodes: nodes,
-  //   links: links,
-  //   linkUps: linkUps,
-  // };
+  for (let i = 0; i < nodes.length; i++) {
+    const node = nodes[i];
+    var newObj = {
+      id: node.id,
+      name: node.name,
+      spouseIds: node.spouses.map((spouse) => spouse.id),
+      children: node.children.map((child) => child.id),
+      lived: node.lived,
+    };
+    obj.push(newObj);
+  }
 
-  // download(JSON.stringify(jsonData), "yourfile.json", "text/plain");
+  let jsonData = {
+    data: obj,
+  };
+
+  download(JSON.stringify(jsonData), "yourfile.json", "text/plain");
 }
 
 function download(content, fileName, contentType) {
@@ -126,15 +153,39 @@ function getData() {
     node.setSpouses(spouses);
   }
 
-  // for (let i = 0; i < nodes.length; i++) {
-  //   const element = nodes[i];
-  //   element.children.forEach((childId) => {
-  //     let spouse = element.spouses.find((spouse) =>
-  //       spouse.children.includes(childId)
-  //     );
-  //     element.links.length > 1 && console.log(element.links);
-  //   });
-  // }
+  for (let i = 0; i < nodes.length; i++) {
+    const element = nodes[i];
+    element.children.forEach((childId) => {
+      let spouse = element.spouses.find((spouse) =>
+        spouse.children.includes(childId)
+      );
+      let link = element.links.find((lnk) => lnk.source === spouse);
+      if (link) {
+        let child = getById(childId);
+        link.linkUp.addChildren(child);
+        child.initilize(null, [link.source, link.target]);
+        element.children.push(child);
+      }
+    });
+  }
+
+  for (let i = 0; i < nodes.length; i++) {
+    const node = nodes[i];
+    if (!node.buttons.length) node.initilize();
+    getDepth(node);
+    node.updateHeight();
+    node.children = node.children.filter((child) => child instanceof Node);
+  }
+}
+
+function getDepth(node) {
+  let el = node;
+  if (el.spouses[0]) {
+    el.depth = el.spouses[0].depth;
+  }
+  if (el.parents[0]) {
+    el.depth = el.parents[0].depth + 1;
+  }
 }
 
 function getById(id) {

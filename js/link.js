@@ -110,7 +110,6 @@ class LinkUp {
   remove() {
     removeElement(linkUps, this);
     this.links.forEach((link) => {
-      console.log(link);
       link.remove();
     });
   }
