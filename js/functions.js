@@ -44,10 +44,11 @@ function removeElement(arr, el) {
   }
 }
 
-function addMember() {
-  let newNode = new Node(crypto.randomUUID(), 200, 100, "name", [], []);
-  newNode.initilize();
+function addMember(id = crypto.randomUUID(), init = true) {
+  let newNode = new Node(id, 200, 100, "name", [], []);
+  init && newNode.initilize();
   nodes.push(newNode);
+  return newNode;
 }
 
 function openPopup() {
@@ -81,13 +82,15 @@ function handleSave(type) {
     return;
   }
 
-  let jsonData = {
-    nodes: nodes,
-    links: links,
-    linkUps: linkUps,
-  };
+  console.log(nodes);
 
-  download(JSON.stringify(jsonData), "yourfile.json", "text/plain");
+  // let jsonData = {
+  //   nodes: nodes,
+  //   links: links,
+  //   linkUps: linkUps,
+  // };
+
+  // download(JSON.stringify(jsonData), "yourfile.json", "text/plain");
 }
 
 function download(content, fileName, contentType) {
@@ -96,4 +99,34 @@ function download(content, fileName, contentType) {
   a.href = URL.createObjectURL(file);
   a.download = fileName;
   a.click();
+}
+
+function getData() {
+  for (let i = 0; i < data.length; i++) {
+    const element = data[i];
+    if (element?.done) continue;
+    let newNode = addMember(element.id, false);
+    newNode.setSpouses(element.spouseIds);
+    newNode.nodeUpdate(element.name, element.lived);
+  }
+
+  for (let i = 0; i < nodes.length; i++) {
+    const node = nodes[i];
+    node.name === "Yurdagul kaymak" && console.log(node);
+
+    let spouses = [];
+    for (let i = 0; i < node.spouses.length; i++) {
+      const spouseId = node.spouses[i];
+      let spouse = getById(spouseId);
+      if (spouse.spouses.includes(node)) continue;
+      node.addSpouse(spouse);
+      spouses.push(spouse);
+    }
+
+    node.setSpouses(spouses);
+  }
+}
+
+function getById(id) {
+  return nodes.find((node) => node.id === id);
 }

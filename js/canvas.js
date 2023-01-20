@@ -1,6 +1,7 @@
 function setup() {
   document.addEventListener("contextmenu", (event) => event.preventDefault());
   canvas = createCanvas(windowWidth, windowHeight);
+  getData();
 }
 
 function draw() {

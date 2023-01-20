@@ -62,6 +62,10 @@ class Node extends Draggable {
     this.parents = parents;
   }
 
+  setSpouses(spouses) {
+    this.spouses = spouses;
+  }
+
   addParents() {
     let parent1 = new Node(
       crypto.randomUUID(),
@@ -82,16 +86,10 @@ class Node extends Draggable {
   }
 
   addSpouse(sp = null) {
-    sp && this.spouses.push(sp);
-    let node = new Node(
-      crypto.randomUUID(),
-      this.x + 200,
-      this.y,
-      "name",
-      [this],
-      []
-    );
-    this.spouses.push(node);
+    let node = sp
+      ? sp
+      : new Node(crypto.randomUUID(), this.x + 200, this.y, "name", [this], []);
+    !sp && this.spouses.push(node);
 
     let newLink = new Link(this, node, "marriage", this.spouses.length);
     links.push(newLink);
@@ -103,7 +101,8 @@ class Node extends Draggable {
     this.addLink(newLink);
     node.initilize(newLink);
 
-    nodes.push(node);
+    !sp && nodes.push(node);
+    return node;
   }
 
   drawText(content, x, y, w) {
