@@ -66,6 +66,10 @@ class Node extends Draggable {
     this.spouses = spouses;
   }
 
+  setChildren(children) {
+    this.children = children;
+  }
+
   addParents() {
     let parent1 = new Node(
       crypto.randomUUID(),

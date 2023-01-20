@@ -107,24 +107,34 @@ function getData() {
     if (element?.done) continue;
     let newNode = addMember(element.id, false);
     newNode.setSpouses(element.spouseIds);
+    newNode.setChildren(element.children);
     newNode.nodeUpdate(element.name, element.lived);
   }
 
   for (let i = 0; i < nodes.length; i++) {
     const node = nodes[i];
-    node.name === "Yurdagul kaymak" && console.log(node);
 
     let spouses = [];
     for (let i = 0; i < node.spouses.length; i++) {
       const spouseId = node.spouses[i];
       let spouse = getById(spouseId);
+      spouses.push(spouse);
       if (spouse.spouses.includes(node)) continue;
       node.addSpouse(spouse);
-      spouses.push(spouse);
     }
 
     node.setSpouses(spouses);
   }
+
+  // for (let i = 0; i < nodes.length; i++) {
+  //   const element = nodes[i];
+  //   element.children.forEach((childId) => {
+  //     let spouse = element.spouses.find((spouse) =>
+  //       spouse.children.includes(childId)
+  //     );
+  //     element.links.length > 1 && console.log(element.links);
+  //   });
+  // }
 }
 
 function getById(id) {
