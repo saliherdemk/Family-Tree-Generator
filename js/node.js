@@ -120,8 +120,8 @@ class Node extends Draggable {
   }
 
   preDraw() {
-    designMode && this.update();
-    designMode && this.over();
+    this.update();
+    this.over();
   }
 
   draw() {

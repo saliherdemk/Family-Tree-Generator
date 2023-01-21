@@ -18,6 +18,21 @@ body {
   bottom: 0;
 }
 
+#mode-btn {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  bottom: -5%;
+  right: -5%;
+  border-radius: 50%;
+  border: none;
+  background-color: #94a3b8;
+}
+
+.mode-off {
+  opacity: 0.5;
+}
+
 .btn {
   width: 10vw;
   height: 10vh;
@@ -30,20 +45,20 @@ body {
   display: none;
 }
 
-#menu-btn{
+#menu-btn {
   background-color: #f43f5e;
   display: block;
 }
 
-#add-member-btn{
+#add-member-btn {
   background-color: #16a34a;
 }
 
-#import-btn{
+#import-btn {
   background-color: #279baf;
 }
 
-.save-btn{
+.save-btn {
   background-color: #1d4ed8;
 }
 
@@ -54,7 +69,7 @@ body {
   overflow: hidden;
 }
 
-.show-btn{
+.show {
   display: block;
 }
 
@@ -66,7 +81,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .disabled {
@@ -115,6 +130,34 @@ body {
 
 #input-container-popup {
   margin: 10px;
+}
+
+/* Styling Info Container*/
+.info-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 98;
+}
+.popup-info {
+  position: relative;
+  max-width: 500px;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-info img {
+  width: 100%;
+  height: 100%;
 }
 
 /* https://codepen.io/avstorm/pen/gKGbxo */
@@ -187,12 +230,8 @@ body {
   transition: all 0.1s ease;
 }
 
-
-
 @media screen and (max-width: 768px) {
-  .btn{
+  .btn {
     width: 20vw;
-    
   }
-  
 }

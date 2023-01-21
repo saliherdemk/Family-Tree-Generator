@@ -7,6 +7,7 @@ class Draggable {
     this.offsetY;
     this.globOffsetX;
     this.globOffsetY;
+    this.hasDefaultCoordinates = false;
   }
 
   over() {
@@ -24,6 +25,12 @@ class Draggable {
 
   updateHeight() {
     this.y += this.depth * 300;
+  }
+
+  setCoordinates(x, y) {
+    this.x = x;
+    this.y = y;
+    this.hasDefaultCoordinates = true;
   }
 
   updateCoordinates() {
@@ -103,7 +110,7 @@ class Draggable {
       this.dragging = true;
       this.offsetX = this.x - mouseX;
       this.offsetY = this.y - mouseY;
-      if (mouseButton === RIGHT) {
+      if (mouseButton === RIGHT && designMode) {
         this.showButtons();
       }
     }

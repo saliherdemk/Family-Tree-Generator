@@ -5,6 +5,7 @@ var canvas;
 var designMode = true;
 var selectedElementForUpdate = null;
 var canvasDragging = false;
+var fileController;
 
 const designBtn = document.getElementById("mode-btn");
 const nameInp = document.getElementById("name-inp");

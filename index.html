@@ -8,15 +8,25 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- <button onclick="changeMode()" id="mode-btn">Turn on Design Mode</button> -->
-
     <div class="options">
       <div class="menu-items-container hide-menu">
         <button onclick="addMember()" class="btn" id="add-member-btn">
           Add Member
         </button>
-          <input id='fileid' type='file' hidden accept="application/JSON" onchange="importJson(event)"/>
-          <input type="button" class="btn" id="import-btn" value="Import Json" onclick="trigger()">
+        <input
+          id="fileid"
+          type="file"
+          hidden
+          accept="application/JSON"
+          onchange="importJson(event)"
+        />
+        <input
+          type="button"
+          class="btn"
+          id="import-btn"
+          value="Import Json"
+          onclick="trigger()"
+        />
         <button onclick="handleSave('image')" class="btn save-btn">
           Save as Image
         </button>
@@ -70,6 +80,31 @@
       </div>
     </div>
 
+    <button id="mode-btn" onclick="toggleDesignMode()"></button>
+
+    <div class="info-container" onclick="closeInformation()">
+      <div class="popup-info">
+        <h3>Family Tree Generator</h3>
+        <img src="./img/fullAdder.PNG" alt="" />
+
+        <div class="tips">
+          <ul>
+            Double click to update node
+          </ul>
+          <ul>
+            Right click the node to add kinsman
+          </ul>
+          <ul>
+            Hold right click and drag mouse to pan
+          </ul>
+          <ul>
+            You can use default browser zoom by pressing alt + (mouse whell or
+            +/-)
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js"
       integrity="sha512-WJXVjqeINVpi5XXJ2jn0BSCfp0y80IKrYh731gLRnkAS9TKc5KNt/OfLtu+fCueqdWniouJ1ubM+VI/hbo7POQ=="
@@ -78,6 +113,7 @@
     ></script>
 
     <script src="js/data.js"></script>
+    <script src="js/fileController.js"></script>
     <script src="js/variables.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/canvas.js"></script>

@@ -1,14 +1,14 @@
 function setup() {
   document.addEventListener("contextmenu", (event) => event.preventDefault());
   canvas = createCanvas(windowWidth, windowHeight);
-  getData();
+  fileController = new FileController();
 }
 
 function draw() {
   strokeWeight(2);
   background(255);
 
-  preDrawAction(nodes);
+  designMode && preDrawAction(nodes);
 
   fill(255);
 

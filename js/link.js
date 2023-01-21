@@ -50,6 +50,7 @@ class LinkUp {
     this.r = 20;
     this.rollover = false;
     this.links = [];
+    this.children = [];
   }
 
   over() {
@@ -80,7 +81,7 @@ class LinkUp {
     !ch && newChild.initilize(newLink, [parent1, parent2]);
     ch && ch.addLink(newLink);
     this.addLink(newLink);
-
+    this.children.push(newChild.id);
     !ch && nodes.push(newChild);
   }
 
@@ -98,7 +99,7 @@ class LinkUp {
   }
 
   preDraw() {
-    this.over();
+    designMode && this.over();
     this.update();
     line(this.x, this.y, this.x, this.y - 40);
   }
