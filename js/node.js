@@ -125,10 +125,15 @@ class Node extends Draggable {
   }
 
   draw() {
-    rect(this.x, this.y, this.w, this.h);
+    let strokeClr =
+      this.rollover || this.selected ? color(173, 216, 230) : color(0);
+    stroke(strokeClr);
 
+    rect(this.x, this.y, this.w, this.h);
+    noStroke();
     this.drawText(this.name, this.x, this.y + this.h / 4, this.w);
     this.drawText(this.lived, this.x, this.y + this.h - 20, this.w);
+    stroke(0);
   }
 
   remove() {

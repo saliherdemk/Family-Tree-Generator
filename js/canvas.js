@@ -2,13 +2,17 @@ function setup() {
   document.addEventListener("contextmenu", (event) => event.preventDefault());
   canvas = createCanvas(windowWidth, windowHeight);
   fileController = new FileController();
+  select = new Select(mouseX, mouseY, 0, 0, false);
 }
 
 function draw() {
   strokeWeight(2);
   background(255);
 
-  designMode && preDrawAction(nodes);
+  if (designMode) {
+    select.draw();
+    preDrawAction(nodes);
+  }
 
   fill(255);
 
@@ -34,7 +38,10 @@ function draw() {
 function mousePressed() {
   pressedAction(nodes);
   pressedAction(linkUps);
-
+  designMode &&
+    mouseButton === LEFT &&
+    !nodes.find((node) => node.dragging === true) &&
+    select.pressed();
   canvasDragging = mouseButton === RIGHT;
 }
 
@@ -43,6 +50,8 @@ function mouseReleased() {
     const node = nodes[i];
     node.released();
   }
+  select.released();
+
   canvasDragging = false;
 }
 

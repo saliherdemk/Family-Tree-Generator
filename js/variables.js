@@ -6,6 +6,9 @@ var designMode = true;
 var selectedElementForUpdate = null;
 var canvasDragging = false;
 var fileController;
+var selectMode = false;
+var select;
+var selected = [];
 
 const designBtn = document.getElementById("mode-btn");
 const nameInp = document.getElementById("name-inp");

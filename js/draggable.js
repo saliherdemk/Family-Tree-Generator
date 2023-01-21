@@ -8,6 +8,11 @@ class Draggable {
     this.globOffsetX;
     this.globOffsetY;
     this.hasDefaultCoordinates = false;
+    this.selected = false;
+  }
+
+  setSelected(value) {
+    this.selected = value;
   }
 
   over() {
@@ -39,6 +44,16 @@ class Draggable {
       this.y = mouseY + this.globOffsetY;
     }
     if (this.dragging) {
+      for (let i = 0; i < select.selected.length; i++) {
+        const element = select.selected[i];
+        if (element == this) {
+          continue;
+        }
+        let a = element.x - this.x;
+        let b = element.y - this.y;
+        element.x = mouseX + a + this.offsetX;
+        element.y = mouseY + b + this.offsetY;
+      }
       this.x = mouseX + this.offsetX;
       this.y = mouseY + this.offsetY;
 
