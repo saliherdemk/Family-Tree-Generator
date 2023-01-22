@@ -103,14 +103,20 @@ class FileController {
         if (link) {
           let child = this.getById(childId);
           link.linkUp.addChildren(child);
-          child.initilize(null, [link.source, link.target]);
           element.children.push(child);
         }
       });
     }
   }
 
+  resetCanvas() {
+    nodes = [];
+    links = [];
+    linkUps = [];
+  }
+
   importData() {
+    this.resetCanvas();
     this.createMembers();
     this.createSpouseRelations();
     this.createChildrenRelations();

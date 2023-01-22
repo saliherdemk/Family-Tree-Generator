@@ -142,6 +142,14 @@ class Node extends Draggable {
       el.remove();
     });
 
+    this.parents.forEach((parent) => {
+      removeElement(parent.children, this);
+    });
+
+    this.spouses.forEach((spouse) => {
+      removeElement(spouse.spouses, this);
+    });
+
     for (let i = 0; i < this.links.length; i++) {
       const link = this.links[i];
       link.remove(true);

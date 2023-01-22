@@ -100,7 +100,6 @@ class Draggable {
     if (isFilled) this.x += 200;
 
     this.updateCoordinates();
-
     for (let i = 0; i < this.buttons.length; i++) {
       const button = this.buttons[i];
       button.position(this.x + btnAttrs[i][0], this.y + btnAttrs[i][1]);
