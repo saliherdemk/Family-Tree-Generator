@@ -32,24 +32,39 @@ class Draggable {
     this.y = y;
   }
 
+  updateSelectedCoordinates() {
+    for (let i = 0; i < select.selected.length; i++) {
+      const element = select.selected[i];
+      if (element == this) {
+        continue;
+      }
+      let a = element.x - this.x;
+      let b = element.y - this.y;
+      element.x = mouseX + a + this.offsetX;
+      element.y = mouseY + b + this.offsetY;
+    }
+  }
+
   updateCoordinates() {
     if (canvasDragging) {
       this.x = mouseX + this.globOffsetX;
       this.y = mouseY + this.globOffsetY;
     }
     if (this.dragging) {
-      for (let i = 0; i < select.selected.length; i++) {
-        const element = select.selected[i];
-        if (element == this) {
-          continue;
-        }
-        let a = element.x - this.x;
-        let b = element.y - this.y;
-        element.x = mouseX + a + this.offsetX;
-        element.y = mouseY + b + this.offsetY;
-      }
+      this.updateSelectedCoordinates();
       this.x = mouseX + this.offsetX;
       this.y = mouseY + this.offsetY;
+
+      for (let i = 0; i < nodes.length; i++) {
+        const node = nodes[i];
+        if (node === this) continue;
+        if (Math.abs(node.x - this.x) < 5) {
+          this.x = node.x;
+        }
+        if (Math.abs(node.y - this.y) < 5) {
+          this.y = node.y;
+        }
+      }
     }
   }
 

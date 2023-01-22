@@ -160,6 +160,10 @@ body {
   height: 100%;
 }
 
+.tips {
+  padding-right: 5%;
+}
+
 /* https://codepen.io/avstorm/pen/gKGbxo */
 .inp {
   position: relative;
