@@ -2,7 +2,7 @@ function setup() {
   document.addEventListener("contextmenu", (event) => event.preventDefault());
   canvas = createCanvas(windowWidth, windowHeight);
   fileController = new FileController();
-  select = new Select(mouseX, mouseY, 0, 0, false);
+  select = new Select();
 }
 
 function draw() {

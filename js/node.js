@@ -6,7 +6,6 @@ class Node extends Draggable {
     this.y = y;
     this.w = 180;
     this.h = 80;
-    this.depth = 0;
     this.name = name;
     this.lived = "????-????";
     this.spouses = spouses;

@@ -7,7 +7,6 @@ class Draggable {
     this.offsetY;
     this.globOffsetX;
     this.globOffsetY;
-    this.hasDefaultCoordinates = false;
     this.selected = false;
   }
 
@@ -28,14 +27,9 @@ class Draggable {
     }
   }
 
-  updateHeight() {
-    this.y += this.depth * 300;
-  }
-
   setCoordinates(x, y) {
     this.x = x;
     this.y = y;
-    this.hasDefaultCoordinates = true;
   }
 
   updateCoordinates() {
@@ -56,10 +50,6 @@ class Draggable {
       }
       this.x = mouseX + this.offsetX;
       this.y = mouseY + this.offsetY;
-
-      this.spouses.forEach((spouse) => {
-        spouse.y = this.y;
-      });
     }
   }
 

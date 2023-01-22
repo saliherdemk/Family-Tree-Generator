@@ -118,21 +118,8 @@ class FileController {
     for (let i = 0; i < nodes.length; i++) {
       const node = nodes[i];
       if (!node.buttons.length) node.initilize();
-      if (!node.hasDefaultCoordinates) {
-        this.getDepth(node);
-        node.updateHeight();
-      }
-      node.children = node.children.filter((child) => child instanceof Node);
-    }
-  }
 
-  getDepth(node) {
-    let el = node;
-    if (el.spouses[0]) {
-      el.depth = el.spouses[0].depth;
-    }
-    if (el.parents[0]) {
-      el.depth = el.parents[0].depth + 1;
+      node.children = node.children.filter((child) => child instanceof Node);
     }
   }
 

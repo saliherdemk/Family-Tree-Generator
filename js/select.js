@@ -1,10 +1,10 @@
 class Select {
-  constructor(x, y, w, h, isActive) {
-    this.x = x;
-    this.y = y;
-    this.w = w;
-    this.h = h;
-    this.isActive = isActive;
+  constructor() {
+    this.x = 0;
+    this.y = 0;
+    this.w = 0;
+    this.h = 0;
+    this.isActive = false;
     this.selected = [];
   }
 
@@ -14,9 +14,12 @@ class Select {
       let h = mouseY - this.y;
 
       fill(173, 216, 239, 50);
+      stroke(173, 216, 230);
       strokeWeight(1);
       rect(this.x, this.y, w, h);
       this.addSelectedNodes(w, h);
+      stroke(0);
+      strokeWeight(2);
     }
   }
 
