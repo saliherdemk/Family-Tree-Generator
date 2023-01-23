@@ -51,17 +51,19 @@ class Draggable {
       this.y = mouseY + this.globOffsetY;
     }
     if (this.dragging) {
-      this.updateSelectedCoordinates();
+      select.selected.includes(this)
+        ? this.updateSelectedCoordinates()
+        : select.reset();
       this.x = mouseX + this.offsetX;
       this.y = mouseY + this.offsetY;
 
       for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
         if (node === this) continue;
-        if (Math.abs(node.x - this.x) < 5) {
+        if (Math.abs(node.x - this.x) < 5 && !this.selected) {
           this.x = node.x;
         }
-        if (Math.abs(node.y - this.y) < 5) {
+        if (Math.abs(node.y - this.y) < 5 && !this.selected) {
           this.y = node.y;
         }
       }
@@ -132,6 +134,7 @@ class Draggable {
       if (mouseButton === RIGHT && designMode) {
         this.showButtons();
       }
+      select.released();
     }
 
     this.globOffsetX = this.x - mouseX;

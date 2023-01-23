@@ -8,6 +8,13 @@ class Select {
     this.selected = [];
   }
 
+  reset() {
+    for (let i = 0; i < this.selected.length; i++) {
+      this.selected[i].setSelected(false);
+    }
+    this.selected = [];
+  }
+
   draw() {
     if (this.isActive) {
       let w = mouseX - this.x;

@@ -64,11 +64,15 @@ class LinkUp {
 
   pressed() {
     this.isActive = this.rollover;
+    this.rollover && select.released();
   }
 
   released() {
     if (this.rollover) {
       this.addChildren();
+    } else if (this.isActive) {
+      let childNode = nodes.find((node) => node.rollover === true);
+      childNode && !childNode.parents.length && this.addChildren(childNode);
     }
     this.isActive = false;
   }
@@ -87,10 +91,15 @@ class LinkUp {
     let newLink = new Link(this, newChild, "children");
     links.push(newLink);
     !ch && newChild.initilize(newLink, [parent1, parent2]);
-    ch && ch.addLink(newLink);
     this.addLink(newLink);
     this.children.push(newChild.id);
     !ch && nodes.push(newChild);
+
+    if (ch) {
+      ch.addLink(newLink);
+      ch.buttons[0].attribute("disabled", "");
+      ch.buttons[0].addClass("disabled");
+    }
   }
 
   update() {

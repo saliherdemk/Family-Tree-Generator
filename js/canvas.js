@@ -36,12 +36,9 @@ function draw() {
 }
 
 function mousePressed() {
+  designMode && mouseButton === LEFT && select.pressed();
   pressedAction(nodes);
   pressedAction(linkUps);
-  designMode &&
-    mouseButton === LEFT &&
-    !nodes.find((node) => node.dragging === true) &&
-    select.pressed();
   canvasDragging = mouseButton === RIGHT || !designMode;
 }
 

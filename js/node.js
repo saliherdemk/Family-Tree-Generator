@@ -80,9 +80,10 @@ class Node extends Draggable {
       [this]
     );
 
-    parent1.addSpouse();
+    let parent2 = parent1.addSpouse();
     parent1.initilize();
     parent1.links[0].linkUp.addChildren(this);
+    this.setParents([parent1, parent2]);
     nodes.push(parent1);
 
     this.buttons[0].attribute("disabled", "");

@@ -20,8 +20,8 @@ body {
 
 #mode-btn {
   position: absolute;
-  width: 10vw;
-  height: 10vw;
+  width: 10vmax;
+  height: 10vmax;
   bottom: -5%;
   right: -5%;
   border-radius: 50%;
@@ -34,9 +34,9 @@ body {
 }
 
 .btn {
-  width: 10vw;
+  width: 10vmax;
   height: 10vh;
-  font-size: 2vh;
+  font-size: 1vmax;
   border-radius: 10px;
   margin-bottom: 5%;
   border: none;
