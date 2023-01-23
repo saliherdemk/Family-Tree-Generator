@@ -27,7 +27,7 @@ function draw() {
 
   drawAction(linkUps);
 
-  if (mouseButton === RIGHT) {
+  if (mouseButton === RIGHT || !designMode) {
     for (let i = 0; i < nodes.length; i++) {
       const node = nodes[i];
       node.updateCoordinates(true);
@@ -42,7 +42,7 @@ function mousePressed() {
     mouseButton === LEFT &&
     !nodes.find((node) => node.dragging === true) &&
     select.pressed();
-  canvasDragging = mouseButton === RIGHT;
+  canvasDragging = mouseButton === RIGHT || !designMode;
 }
 
 function mouseReleased() {
