@@ -30,7 +30,7 @@ function draw() {
   if (mouseButton === RIGHT || !designMode) {
     for (let i = 0; i < nodes.length; i++) {
       const node = nodes[i];
-      node.updateCoordinates(true);
+      node.updateCoordinates();
     }
   }
 }
@@ -46,10 +46,9 @@ function mousePressed() {
 }
 
 function mouseReleased() {
-  for (let i = 0; i < nodes.length; i++) {
-    const node = nodes[i];
-    node.released();
-  }
+  releasedAction(nodes);
+  releasedAction(linkUps);
+
   select.released();
 
   canvasDragging = false;

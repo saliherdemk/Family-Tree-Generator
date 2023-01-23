@@ -51,6 +51,7 @@ class LinkUp {
     this.rollover = false;
     this.links = [];
     this.children = [];
+    this.isActive = false;
   }
 
   over() {
@@ -62,7 +63,14 @@ class LinkUp {
   }
 
   pressed() {
-    this.rollover && this.addChildren();
+    this.isActive = this.rollover;
+  }
+
+  released() {
+    if (this.rollover) {
+      this.addChildren();
+    }
+    this.isActive = false;
   }
 
   addLink(link) {
@@ -105,6 +113,9 @@ class LinkUp {
   }
 
   draw() {
+    if (this.isActive) {
+      line(this.x, this.y, mouseX, mouseY);
+    }
     circle(this.x, this.y, this.r);
   }
 

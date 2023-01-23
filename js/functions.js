@@ -16,6 +16,12 @@ function pressedAction(arr) {
   }
 }
 
+function releasedAction(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].released();
+  }
+}
+
 function dist(x1, y1, x2, y2) {
   return (x2 - x1) ** 2 + (y2 - y1) ** 2;
 }
