@@ -136,24 +136,28 @@ class Node extends Draggable {
     stroke(0);
   }
 
-  remove() {
-    removeElement(nodes, this);
+  removeSpouse(spouse) {
+    this.spouses = this.spouses.filter((sp) => sp !== spouse);
+  }
 
+  remove() {
     [...this.buttons, ...this.inputs].forEach((el) => {
       el.remove();
     });
 
-    this.parents.forEach((parent) => {
-      removeElement(parent.children, this);
-    });
+    this.links
+      .find((link) => link.type === "children")
+      .source.removeChildren(this.id);
 
     this.spouses.forEach((spouse) => {
-      removeElement(spouse.spouses, this);
+      spouse.removeSpouse(this);
     });
 
     for (let i = 0; i < this.links.length; i++) {
       const link = this.links[i];
       link.remove(true);
     }
+
+    removeElement(nodes, this);
   }
 }

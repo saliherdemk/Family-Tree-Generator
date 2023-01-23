@@ -104,6 +104,7 @@ class FileController {
           let child = this.getById(childId);
           link.linkUp.addChildren(child);
           element.children.push(child);
+          child?.initilize(null, [element, spouse]);
         }
       });
     }

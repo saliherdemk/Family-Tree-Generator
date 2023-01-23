@@ -72,7 +72,9 @@ class LinkUp {
       this.addChildren();
     } else if (this.isActive) {
       let childNode = nodes.find((node) => node.rollover === true);
-      childNode && !childNode.parents.length && this.addChildren(childNode);
+      childNode &&
+        !childNode.parents.length &&
+        this.addChildren(childNode, true);
     }
     this.isActive = false;
   }
@@ -81,7 +83,7 @@ class LinkUp {
     this.links.push(link);
   }
 
-  addChildren(ch = null) {
+  addChildren(ch = null, force = false) {
     let parent1 = this.sourceLink.source;
     let parent2 = this.sourceLink.target;
 
@@ -95,11 +97,13 @@ class LinkUp {
     this.children.push(newChild.id);
     !ch && nodes.push(newChild);
 
-    if (ch) {
-      ch.addLink(newLink);
-      ch.buttons[0].attribute("disabled", "");
-      ch.buttons[0].addClass("disabled");
-    }
+    ch && ch.addLink(newLink);
+    force && ch.buttons[0].attribute("disabled", "");
+    force && ch.buttons[0].addClass("disabled");
+  }
+
+  removeChildren(child) {
+    this.children = this.children.filter((ch) => ch !== child);
   }
 
   update() {
