@@ -25,14 +25,15 @@ body {
 }
 
 #mode-btn {
-  position: absolute;
-  width: 5vmax;
-  height: 5vmax;
-  bottom: 0;
+  position: fixed;
+  width: 6vmax;
+  height: 6vh;
+  margin-bottom: 1.5%;
   right: 0;
+  bottom: 0;
+  color: white;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
-
   border: none;
   background-color: #94a3b8;
 }
@@ -43,7 +44,7 @@ body {
 
 .btn {
   width: 10vmax;
-  height: 10vh;
+  height: 6vh;
   font-size: 1vmax;
   border-radius: 10px;
   margin-bottom: 5%;
@@ -241,10 +242,4 @@ body {
 .inp input:focus + .label + .focus-bg {
   transform: scaleX(1);
   transition: all 0.1s ease;
-}
-
-@media screen and (max-width: 768px) {
-  .btn {
-    width: 20vw;
-  }
 }
