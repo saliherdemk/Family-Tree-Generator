@@ -28,8 +28,10 @@ body {
   position: absolute;
   width: 10vmax;
   height: 10vmax;
-  bottom: -5%;
-  right: -5%;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -5%;
+  margin-right: -5%;
   border-radius: 50%;
   border: none;
   background-color: #94a3b8;
