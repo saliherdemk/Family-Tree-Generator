@@ -115,6 +115,7 @@ function toggleDesignMode() {
   designMode = !designMode;
   document.getElementById("mode-btn").classList.toggle("mode-off");
   document.querySelector(".options").classList.toggle("hidden");
+  document.getElementById("github-logo").classList.toggle("hidden");
 
   nodes.forEach((node) => {
     node.hideButtons();
