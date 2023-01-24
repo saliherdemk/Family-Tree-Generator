@@ -26,13 +26,13 @@ body {
 
 #mode-btn {
   position: absolute;
-  width: 10vmax;
-  height: 10vmax;
+  width: 5vmax;
+  height: 5vmax;
   bottom: 0;
   right: 0;
-  margin-bottom: -5%;
-  margin-right: -5%;
-  border-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+
   border: none;
   background-color: #94a3b8;
 }
