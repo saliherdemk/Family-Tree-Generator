@@ -60,6 +60,8 @@ class Node extends Draggable {
 
   setParents(parents) {
     this.parents = parents;
+    this.buttons[0].attribute("disabled", "");
+    this.buttons[0].addClass("disabled");
   }
 
   setSpouses(spouses) {
@@ -85,9 +87,6 @@ class Node extends Draggable {
     parent1.links[0].linkUp.addChildren(this);
     this.setParents([parent1, parent2]);
     nodes.push(parent1);
-
-    this.buttons[0].attribute("disabled", "");
-    this.buttons[0].addClass("disabled");
   }
 
   addSpouse(sp = null) {
@@ -147,7 +146,7 @@ class Node extends Draggable {
 
     this.links
       .find((link) => link.type === "children")
-      .source.removeChildren(this.id);
+      ?.source.removeChildren(this.id);
 
     this.spouses.forEach((spouse) => {
       spouse.removeSpouse(this);

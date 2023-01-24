@@ -10,6 +10,12 @@ body {
   font-family: "Poppins";
 }
 
+#github-logo{
+  position: absolute;
+  right: 0;
+  width: 5vmax;
+}
+
 .options {
   position: fixed;
   padding: 1%;
@@ -163,6 +169,7 @@ body {
 .tips {
   padding-right: 5%;
 }
+
 
 /* https://codepen.io/avstorm/pen/gKGbxo */
 .inp {

@@ -28,10 +28,13 @@ class FileController {
 
     for (let i = 0; i < nodes.length; i++) {
       const node = nodes[i];
-      var children = node.links
-        .map((link) => (link.linkUp ? link.linkUp?.children : []))
-        .reduce((prev, current) => [...prev, ...current]);
 
+      var children = [];
+      if (node.links.length) {
+        children = node.links
+          .map((link) => (link.linkUp ? link.linkUp?.children : []))
+          .reduce((prev, current) => [...prev, ...current]);
+      }
       var newObj = {
         id: node.id,
         name: node.name,
@@ -104,7 +107,7 @@ class FileController {
           let child = this.getById(childId);
           link.linkUp.addChildren(child);
           element.children.push(child);
-          child?.initilize(null, [element, spouse]);
+          child?.setParents([element, spouse]);
         }
       });
     }
@@ -120,14 +123,13 @@ class FileController {
     this.resetCanvas();
     this.createMembers();
     this.createSpouseRelations();
+
+    nodes.map((node) => !node.buttons.length && node.initilize());
     this.createChildrenRelations();
-
-    for (let i = 0; i < nodes.length; i++) {
-      const node = nodes[i];
-      if (!node.buttons.length) node.initilize();
-
-      node.children = node.children.filter((child) => child instanceof Node);
-    }
+    nodes.map(
+      (node) =>
+        (node.children = node.children.filter((child) => child instanceof Node))
+    );
   }
 
   getById(id) {
