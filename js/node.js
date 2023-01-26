@@ -58,6 +58,10 @@ class Node extends Draggable {
     !this.links.includes(link) && this.links.push(link);
   }
 
+  removeLink(link) {
+    this.links = this.links.filter((lnk) => lnk !== link);
+  }
+
   setParents(parents) {
     this.parents = parents;
     this.buttons[0].attribute("disabled", "");

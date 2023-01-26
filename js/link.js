@@ -72,15 +72,20 @@ class LinkUp {
       this.addChildren();
     } else if (this.isActive) {
       let childNode = nodes.find((node) => node.rollover === true);
-      childNode &&
-        !childNode.parents.length &&
+      if (childNode) {
+        this.removeChildren(childNode);
         this.addChildren(childNode, true);
+      }
     }
     this.isActive = false;
   }
 
   addLink(link) {
     this.links.push(link);
+  }
+
+  removeLink(link) {
+    removeElement(this.links, link);
   }
 
   addChildren(ch = null, force = false) {
@@ -102,8 +107,16 @@ class LinkUp {
     force && ch.buttons[0].addClass("disabled");
   }
 
-  removeChildren(child) {
-    this.children = this.children.filter((ch) => ch !== child);
+  removeChildren(child, fromNode = true) {
+    this.children = this.children.filter((ch) => ch !== child.id);
+    if (child instanceof Node && fromNode) {
+      let link = child.links.find((lnk) => lnk.type === "children");
+      link?.source.removeChildren(child, false);
+      link?.source.removeLink(link);
+      link?.remove(true);
+      child.removeLink(link);
+      child.setParents([]);
+    }
   }
 
   update() {
