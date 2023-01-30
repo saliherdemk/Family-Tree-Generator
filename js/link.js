@@ -5,33 +5,45 @@ class Link {
     this.type = type;
     this.linkUp = null;
     this.depth = depth;
+    this.midColor = "#000000";
   }
 
   setLinkUp(link) {
     this.linkUp = link;
   }
 
-  draw() {
-    if (this.type === "marriage") {
-      beginShape();
-      vertex(this.source.x + this.source.w / 2, this.source.y + this.source.h);
-      vertex(
-        this.source.x + this.source.w / 2,
-        this.target.y + this.target.h + 40 * this.depth
-      );
-      vertex(
-        this.target.x + this.target.w / 2,
-        this.target.y + this.target.h + 40 * this.depth
-      );
-      vertex(this.target.x + this.target.w / 2, this.target.y + this.target.h);
+  setMidColor() {
+    let clr1 = hexToRgb(this.source.strokeColor);
+    let clr2 = hexToRgb(this.target.strokeColor);
+    let newValues = [];
+    for (let i = 0; i < clr1.length; i++) {
+      newValues[i] = (clr1[i] + clr2[i]) / 2;
+    }
+    this.midColor = rgbToHex(newValues[0], newValues[1], newValues[2]);
+  }
 
-      endShape();
+  draw() {
+    let source = this.source;
+    let target = this.target;
+    let x2 = target.x + target.w / 2;
+    if (this.type === "marriage") {
+      let x1 = source.x + source.w / 2;
+      let y1 = target.y + target.h + 40 * this.depth;
+
+      stroke(source.strokeColor);
+      line(x1, source.y + source.h, x1, y1);
+      gradientLine(x1, y1, x2, y1, source.strokeColor, target.strokeColor);
+      stroke(target.strokeColor);
+      line(x2, y1, x2, target.y + target.h);
+      stroke(0);
     } else if (this.type === "children") {
+      stroke(this.source.color);
       beginShape();
-      vertex(this.source.x, this.source.y);
-      vertex(this.target.x + this.target.w / 2, this.source.y);
-      vertex(this.target.x + this.target.w / 2, this.target.y);
+      vertex(source.x, source.y);
+      vertex(x2, source.y);
+      vertex(x2, target.y);
       endShape();
+      stroke(0);
     }
   }
 
@@ -52,6 +64,7 @@ class LinkUp {
     this.links = [];
     this.children = [];
     this.isActive = false;
+    this.color = "#000000";
   }
 
   over() {
@@ -94,7 +107,7 @@ class LinkUp {
 
     let newChild = ch
       ? ch
-      : new Node(crypto.randomUUID(), this.x, this.y + 100, "name", [], []);
+      : new Node(crypto.randomUUID(), this.x, this.y + 100, "Unknown", [], []);
     let newLink = new Link(this, newChild, "children");
     links.push(newLink);
     !ch && newChild.initilize(newLink, [parent1, parent2]);
@@ -130,12 +143,15 @@ class LinkUp {
       this.sourceLink.target.h +
       40 * this.sourceLink.depth +
       40;
+    this.color = this.sourceLink.midColor;
   }
 
   preDraw() {
     designMode && this.over();
     this.update();
+    stroke(this.color);
     line(this.x, this.y, this.x, this.y - 40);
+    stroke(0);
   }
 
   draw() {

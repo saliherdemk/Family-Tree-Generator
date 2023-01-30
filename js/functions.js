@@ -51,7 +51,7 @@ function removeElement(arr, el) {
 }
 
 function addMember(id = crypto.randomUUID(), init = true) {
-  let newNode = new Node(id, 200, 100, "name", [], []);
+  let newNode = new Node(id, 200, 100, "Unknown", [], []);
   init && newNode.initilize();
   nodes.push(newNode);
   return newNode;
@@ -60,13 +60,22 @@ function addMember(id = crypto.randomUUID(), init = true) {
 function openPopup() {
   nameInp.value = selectedElementForUpdate.name;
   dateInp.value = selectedElementForUpdate.lived;
+  boxColorInp.value = selectedElementForUpdate.boxColor;
+  strokeColorInp.value = selectedElementForUpdate.strokeColor;
+  textColorInp.value = selectedElementForUpdate.textColor;
 
   popupContainer.style.display = "flex";
   noLoop();
 }
 
 function handlePopupInput() {
-  selectedElementForUpdate.nodeUpdate(nameInp.value, dateInp.value);
+  selectedElementForUpdate.nodeUpdate(
+    nameInp.value,
+    dateInp.value,
+    boxColorInp.value,
+    strokeColorInp.value,
+    textColorInp.value
+  );
   closePopup();
 }
 
@@ -120,4 +129,29 @@ function toggleDesignMode() {
   nodes.forEach((node) => {
     node.hideButtons();
   });
+}
+
+function gradientLine(x1, y1, x2, y2, color1, color2) {
+  // linear gradient from start to end of line
+  var grad = this.drawingContext.createLinearGradient(x1, y1, x2, y2);
+  grad.addColorStop(0, color1);
+  grad.addColorStop(1, color2);
+
+  this.drawingContext.strokeStyle = grad;
+
+  line(x1, y1, x2, y2);
+}
+
+function hexToRgb(hex) {
+  hex = hex.replace("#", "");
+  var bigint = parseInt(hex, 16);
+  var r = (bigint >> 16) & 255;
+  var g = (bigint >> 8) & 255;
+  var b = bigint & 255;
+
+  return [r, g, b];
+}
+
+function rgbToHex(r, g, b) {
+  return "#" + ((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1);
 }

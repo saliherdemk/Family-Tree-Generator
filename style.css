@@ -99,8 +99,8 @@ body {
 
 .done-container {
   display: flex;
-  align-items: flex-end;
-  margin-bottom: 7px;
+  flex: 1;
+  justify-content: end;
 }
 
 .popup-container {
@@ -139,6 +139,13 @@ body {
 
 #input-container-popup {
   margin: 10px;
+}
+
+.color-container {
+  display: flex;
+  width: 70%;
+  padding-left: 10%;
+  justify-content: space-between;
 }
 
 /* Styling Info Container*/

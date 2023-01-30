@@ -77,15 +77,20 @@ class Draggable {
     }
   }
 
-  nodeUpdate(name, date) {
+  nodeUpdate(name, date, boxColor, strokeColor, textColor) {
     this.name = name;
     this.lived = date.substring(0, 9);
+    this.boxColor = boxColor;
+    this.strokeColor = strokeColor;
+    this.textColor = textColor;
 
     let newNameBoxHeight = Math.floor(name.trim().length / 18 - 0.01) * 20;
     let newWidth = this.name.split(" ")[0].length * 10;
 
     this.h = 100 + newNameBoxHeight;
     this.w = Math.max(newWidth, 180);
+
+    this.links.find((lnk) => lnk.type === "marriage").setMidColor();
   }
 
   update() {

@@ -7,13 +7,16 @@ class Node extends Draggable {
     this.w = 180;
     this.h = 80;
     this.name = name;
-    this.lived = "????-????";
+    this.lived = "";
     this.spouses = spouses;
     this.children = children;
     this.parents = [];
     this.inputs = [];
     this.buttons = [];
     this.links = [];
+    this.boxColor = "#ffffff";
+    this.strokeColor = "#000000";
+    this.textColor = "#000000";
   }
 
   resizeHeight(h) {
@@ -81,7 +84,7 @@ class Node extends Draggable {
       crypto.randomUUID(),
       this.x - 200,
       this.y - 200,
-      "name",
+      "Unknown",
       [],
       [this]
     );
@@ -96,10 +99,18 @@ class Node extends Draggable {
   addSpouse(sp = null) {
     let node = sp
       ? sp
-      : new Node(crypto.randomUUID(), this.x + 200, this.y, "name", [this], []);
+      : new Node(
+          crypto.randomUUID(),
+          this.x + 200,
+          this.y,
+          "Unknown",
+          [this],
+          []
+        );
     !sp && this.spouses.push(node);
 
     let newLink = new Link(this, node, "marriage", this.spouses.length);
+    newLink.setMidColor();
     links.push(newLink);
     let newLinkUp = new LinkUp(newLink);
     linkUps.push(newLinkUp);
@@ -114,7 +125,7 @@ class Node extends Draggable {
   }
 
   drawText(content, x, y, w) {
-    fill(0);
+    fill(color(this.textColor));
     textSize(18);
     textAlign(CENTER);
     textWrap(WORD);
@@ -131,8 +142,9 @@ class Node extends Draggable {
     let strokeClr =
       this.rollover || this.selected ? color(173, 216, 230) : color(0);
     stroke(strokeClr);
-
+    fill(color(this.boxColor));
     rect(this.x, this.y, this.w, this.h);
+    noFill();
     noStroke();
     this.drawText(this.name, this.x, this.y + this.h / 4, this.w);
     this.drawText(this.lived, this.x, this.y + this.h - 20, this.w);
