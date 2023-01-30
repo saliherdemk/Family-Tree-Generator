@@ -90,7 +90,7 @@ class Draggable {
     this.h = 100 + newNameBoxHeight;
     this.w = Math.max(newWidth, 180);
 
-    this.links.find((lnk) => lnk.type === "marriage").setMidColor();
+    this.links.find((lnk) => lnk.type === "marriage")?.setMidColor();
   }
 
   update() {
