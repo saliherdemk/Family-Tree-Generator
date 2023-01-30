@@ -12,7 +12,10 @@
       ],
       "lived": "1944-2021",
       "x": 857,
-      "y": 1027
+      "y": 1027,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "fb4dae99-d4f6-4147-97fb-fda6e4c4d46e",
@@ -26,7 +29,10 @@
       ],
       "lived": "????-????",
       "x": 636,
-      "y": 1027
+      "y": 1027,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "4e371d4c-028d-42eb-8fe6-adf90ee2c38e",
@@ -39,7 +45,10 @@
       ],
       "lived": "????-????",
       "x": 1688,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "d52ec14f-d5b1-4bbc-96dd-9fcf5d4ba535",
@@ -52,7 +61,10 @@
       ],
       "lived": "????-????",
       "x": 449,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "3ada2916-2c6b-41b5-8fe7-f8c923698d2c",
@@ -64,7 +76,10 @@
       ],
       "lived": "????-????",
       "x": 1021,
-      "y": 1252
+      "y": 1252,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "ff1b3830-ee12-46d1-9208-afdf1a8cac2a",
@@ -76,7 +91,10 @@
       ],
       "lived": "????-????",
       "x": 204,
-      "y": 1260
+      "y": 1260,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "a3c69684-3ab4-49f5-aacc-ee3f2875b21d",
@@ -88,7 +106,10 @@
       ],
       "lived": "????-????",
       "x": -12,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "ba606990-f719-4bc9-af57-73519c0be867",
@@ -101,7 +122,10 @@
       ],
       "lived": "????-????",
       "x": 1940,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c8cdd41c-412b-4b1a-b029-abee52b8ed61",
@@ -114,7 +138,10 @@
       ],
       "lived": "????-????",
       "x": 664,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e015f390-d23f-4ebb-b9a8-20cf0611cffc",
@@ -126,7 +153,10 @@
       ],
       "lived": "????-????",
       "x": 1272,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "7547c2db-8baa-4349-8f69-b55ddda44e60",
@@ -135,7 +165,10 @@
       "children": [],
       "lived": "????-????",
       "x": 1798,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "67efdf61-2ffa-475f-b3ab-b7f225ae27fc",
@@ -144,7 +177,10 @@
       "children": [],
       "lived": "????-????",
       "x": 2017,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "85d88691-a211-4d68-ac01-7c503547cfbd",
@@ -153,7 +189,10 @@
       "children": [],
       "lived": "????-????",
       "x": 403.5,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "41c65783-4d1d-4cb4-bb92-b8b450434273",
@@ -162,7 +201,10 @@
       "children": [],
       "lived": "????-????",
       "x": 610.5,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "8c727813-47b4-4f3a-987d-2f5284cee45e",
@@ -171,7 +213,10 @@
       "children": [],
       "lived": "????-????",
       "x": 813.5,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "08b250c8-ae6e-4042-989e-dc2adf75edfb",
@@ -180,7 +225,10 @@
       "children": [],
       "lived": "????-????",
       "x": 1051,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "dde5df04-1411-4d5e-884d-217a5a275350",
@@ -189,7 +237,10 @@
       "children": [],
       "lived": "????-????",
       "x": 1281,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "bf386e33-76ef-45fa-a5b6-7259ba8b879f",
@@ -198,7 +249,10 @@
       "children": [],
       "lived": "????-????",
       "x": 184,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "25e35739-32b0-4d2f-81ef-375567adf2d6",
@@ -207,7 +261,10 @@
       "children": [],
       "lived": "????-????",
       "x": -50,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "a991a34a-eb23-431c-b361-481990cae121",
@@ -222,7 +279,10 @@
       ],
       "lived": "1942-2017",
       "x": 3088.5,
-      "y": 924
+      "y": 924,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "10941062-1fd9-4475-aede-222be0e14aeb",
@@ -237,7 +297,10 @@
       ],
       "lived": "1932-2018",
       "x": 2843.5,
-      "y": 924
+      "y": 924,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "08387d13-942d-46e0-94bd-487a61789e06",
@@ -250,7 +313,10 @@
       ],
       "lived": "????-????",
       "x": 2505.5,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "62cc54c4-1d37-4fbe-844b-6b49e6df5dba",
@@ -262,7 +328,10 @@
       "children": [],
       "lived": "????-????",
       "x": 5943.5,
-      "y": 1260
+      "y": 1260,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "23ec5af2-4570-4e6b-896e-4d4b6b4b84de",
@@ -275,7 +344,10 @@
       ],
       "lived": "????-????",
       "x": 4938.5,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "da39c74a-b31f-4ae6-a2cd-bd6a79a15830",
@@ -288,7 +360,10 @@
       ],
       "lived": "????-????",
       "x": 3826,
-      "y": 1255
+      "y": 1255,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "05daea8f-61ef-4e30-9e88-ff72290053dc",
@@ -301,7 +376,10 @@
       ],
       "lived": "????-????",
       "x": 2782.5,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "96d04833-7ec0-479f-88fa-98568fab50c4",
@@ -310,7 +388,10 @@
       "children": [],
       "lived": "????-????",
       "x": 3058.5,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "08ae24c5-26b6-4632-a7f9-6aef781ab436",
@@ -319,7 +400,10 @@
       "children": [],
       "lived": "????-????",
       "x": 2836.5,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "97ad9625-aa48-476b-8464-ea9a269d6063",
@@ -328,7 +412,10 @@
       "children": ["f6d13cb8-869b-44e5-b07a-a0862e81994c"],
       "lived": "????-????",
       "x": 2561.5,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "88a04d30-1833-45e1-83e9-a9e2d0324076",
@@ -337,7 +424,10 @@
       "children": ["f6d13cb8-869b-44e5-b07a-a0862e81994c"],
       "lived": "????-????",
       "x": 2360.5,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "f6d13cb8-869b-44e5-b07a-a0862e81994c",
@@ -346,7 +436,10 @@
       "children": [],
       "lived": "????-????",
       "x": 2446.5,
-      "y": 1741
+      "y": 1741,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "76bff42b-1d8c-4292-a324-cdb416271eb1",
@@ -355,7 +448,10 @@
       "children": [],
       "lived": "????-????",
       "x": 1574,
-      "y": 1506
+      "y": 1506,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "2def2103-c918-49f0-a908-fa28a6a7a33f",
@@ -368,7 +464,10 @@
       ],
       "lived": "????-????",
       "x": 4060.5,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "88e69b47-0036-42ca-9f47-5ee09d74f6b0",
@@ -381,7 +480,10 @@
       ],
       "lived": "????-????",
       "x": 5174.5,
-      "y": 1257
+      "y": 1257,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "578609cd-d9d3-44a0-9c20-661aba03fc4e",
@@ -390,7 +492,10 @@
       "children": [],
       "lived": "????-????",
       "x": 6163.5,
-      "y": 1260
+      "y": 1260,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "7023c264-7ebc-42c6-a94a-6624e8ec7be4",
@@ -399,7 +504,10 @@
       "children": [],
       "lived": "????-????",
       "x": 5719.5,
-      "y": 1260
+      "y": 1260,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "ccc65fad-a03a-495e-b52f-e44b166e269b",
@@ -411,7 +519,10 @@
       ],
       "lived": "????-????",
       "x": 5258.5,
-      "y": 1473
+      "y": 1473,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c4d053a1-5e5d-48c5-94bb-145697a209fb",
@@ -420,7 +531,10 @@
       "children": [],
       "lived": "????-????",
       "x": 5040.5,
-      "y": 1473
+      "y": 1473,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c8100299-63b7-4aaf-aa34-8cff6f0a2c0b",
@@ -429,7 +543,10 @@
       "children": [],
       "lived": "????-????",
       "x": 4828.5,
-      "y": 1473
+      "y": 1473,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "be27de80-fa0c-40c6-ac06-dc3dda1d2584",
@@ -441,7 +558,10 @@
       ],
       "lived": "????-????",
       "x": 5461.5,
-      "y": 1473
+      "y": 1473,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "cd983135-711f-453e-bb29-9708400d5bff",
@@ -450,7 +570,10 @@
       "children": ["7466fa7c-48e9-41b5-b273-cbd2d032fc53"],
       "lived": "1910-1971",
       "x": 1219.5,
-      "y": 700
+      "y": 700,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "ac27f5cb-fcdc-44f1-b094-c7fdaadb826b",
@@ -459,7 +582,10 @@
       "children": ["7466fa7c-48e9-41b5-b273-cbd2d032fc53"],
       "lived": "1907-1988",
       "x": 1491.5,
-      "y": 700
+      "y": 700,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "3ff70977-2ec9-4b2f-a138-82aa9935d55a",
@@ -468,7 +594,10 @@
       "children": ["fb4dae99-d4f6-4147-97fb-fda6e4c4d46e"],
       "lived": "1914-1977",
       "x": 507.5,
-      "y": 689
+      "y": 689,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e564552d-7bdd-404a-95a7-616ff9f11112",
@@ -477,7 +606,10 @@
       "children": ["fb4dae99-d4f6-4147-97fb-fda6e4c4d46e"],
       "lived": "1911-1971",
       "x": 273.5,
-      "y": 689
+      "y": 689,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "788b407c-46f7-42b9-a557-222c625d9a07",
@@ -489,7 +621,10 @@
       ],
       "lived": "",
       "x": 2038,
-      "y": 169
+      "y": 169,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "624d5f8f-dc7e-4d3a-87e5-d916901689e1",
@@ -501,7 +636,10 @@
       ],
       "lived": "",
       "x": 1810,
-      "y": 169
+      "y": 169,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "4503c74c-95ce-4371-9aa7-10fb0ba4fee4",
@@ -510,7 +648,10 @@
       "children": ["cd983135-711f-453e-bb29-9708400d5bff"],
       "lived": "1864-1954",
       "x": 1226.5,
-      "y": 347
+      "y": 347,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "b6f3172a-715c-4205-b5a4-6a47e177b96b",
@@ -519,7 +660,10 @@
       "children": ["cd983135-711f-453e-bb29-9708400d5bff"],
       "lived": "",
       "x": 975.5,
-      "y": 347
+      "y": 347,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "ce544443-a3e1-4310-a07b-43e27988873e",
@@ -528,7 +672,10 @@
       "children": [],
       "lived": "????-????",
       "x": 5470,
-      "y": 1701
+      "y": 1701,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c6c6cf7e-5725-4776-acc2-c72d2c90d702",
@@ -537,7 +684,10 @@
       "children": [],
       "lived": "????-????",
       "x": 5243,
-      "y": 1701
+      "y": 1701,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "789b10fd-a7ef-43f1-b152-2affffc55d26",
@@ -546,7 +696,10 @@
       "children": ["e564552d-7bdd-404a-95a7-616ff9f11112"],
       "lived": "1877-1939",
       "x": 234.5,
-      "y": 460
+      "y": 460,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "809afa17-18b7-4af3-a822-971969ef2b03",
@@ -555,7 +708,10 @@
       "children": ["e564552d-7bdd-404a-95a7-616ff9f11112"],
       "lived": "",
       "x": 0.5,
-      "y": 460
+      "y": 460,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "92a3cd62-662a-49e9-a943-d82605006e4e",
@@ -564,7 +720,10 @@
       "children": ["789b10fd-a7ef-43f1-b152-2affffc55d26"],
       "lived": "",
       "x": 429.5,
-      "y": 242
+      "y": 242,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "961a8440-f266-4539-adaf-2fce626f1050",
@@ -573,7 +732,10 @@
       "children": ["789b10fd-a7ef-43f1-b152-2affffc55d26"],
       "lived": "",
       "x": 212.5,
-      "y": 242
+      "y": 242,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "05aec142-9017-449b-9655-795dfc2e7bf2",
@@ -582,7 +744,10 @@
       "children": ["4503c74c-95ce-4371-9aa7-10fb0ba4fee4"],
       "lived": "",
       "x": 1411,
-      "y": 129
+      "y": 129,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e80fe76f-aa78-4757-a337-c1b9491a8862",
@@ -591,7 +756,10 @@
       "children": ["4503c74c-95ce-4371-9aa7-10fb0ba4fee4"],
       "lived": "",
       "x": 1073.5,
-      "y": 129
+      "y": 129,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "92183591-7fb6-445e-a329-59e999cb69f4",
@@ -603,7 +771,10 @@
       ],
       "lived": "????-????",
       "x": 3886,
-      "y": 1473
+      "y": 1473,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "ee6b4846-113d-4b5c-8c58-15a2a60c7f1b",
@@ -616,7 +787,10 @@
       ],
       "lived": "????-????",
       "x": 3645,
-      "y": 1473
+      "y": 1473,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "a9f74ca8-bca2-4965-88c7-c9155ade4de8",
@@ -625,7 +799,10 @@
       "children": ["907059ed-7cc9-42f4-9040-a44a4248eae4"],
       "lived": "????-????",
       "x": 4353.5,
-      "y": 1473
+      "y": 1473,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "8444e1aa-494c-436e-bda7-2c67365e66fd",
@@ -638,7 +815,10 @@
       ],
       "lived": "????-????",
       "x": 3433.5,
-      "y": 1473
+      "y": 1473,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "431dc32f-0709-40fd-acc3-7f6d81033b2a",
@@ -647,7 +827,10 @@
       "children": [],
       "lived": "????-????",
       "x": 3645,
-      "y": 1748
+      "y": 1748,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "936679f7-5cfe-4ad2-878a-8f760a045075",
@@ -656,7 +839,10 @@
       "children": [],
       "lived": "????-????",
       "x": 3427.5,
-      "y": 1748
+      "y": 1748,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "7cfb426b-aecd-4f4d-8997-a88dd9009ea8",
@@ -665,7 +851,10 @@
       "children": [],
       "lived": "????-????",
       "x": 3219.5,
-      "y": 1748
+      "y": 1748,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "1302cba9-121c-4266-9394-b0f7ff395878",
@@ -677,7 +866,10 @@
       ],
       "lived": "????-????",
       "x": 4131,
-      "y": 1473
+      "y": 1473,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "7c387142-ddf4-4d93-a49b-dc85cd403975",
@@ -686,7 +878,10 @@
       "children": [],
       "lived": "????-????",
       "x": 4122.5,
-      "y": 1748
+      "y": 1748,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "04938422-78ec-4d63-b95d-e8d7ffe3c22b",
@@ -695,7 +890,10 @@
       "children": [],
       "lived": "????-????",
       "x": 3886,
-      "y": 1748
+      "y": 1748,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "afd7b38a-e752-463f-b056-90297eed8116",
@@ -704,7 +902,10 @@
       "children": ["907059ed-7cc9-42f4-9040-a44a4248eae4"],
       "lived": "????-????",
       "x": 4560.5,
-      "y": 1473
+      "y": 1473,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "907059ed-7cc9-42f4-9040-a44a4248eae4",
@@ -713,7 +914,10 @@
       "children": [],
       "lived": "????-????",
       "x": 4441,
-      "y": 1748
+      "y": 1748,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e45a7eec-b746-4920-8eec-26e0fa4654c0",
@@ -722,7 +926,10 @@
       "children": ["10941062-1fd9-4475-aede-222be0e14aeb"],
       "lived": "1911-1995",
       "x": 2871.5,
-      "y": 697
+      "y": 697,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "10e99d72-3a12-4e0d-b01e-5be2b1b47b66",
@@ -731,7 +938,10 @@
       "children": ["10941062-1fd9-4475-aede-222be0e14aeb"],
       "lived": "1910-1958",
       "x": 2199.5,
-      "y": 697
+      "y": 697,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e6d946c3-22d4-4af1-96a9-08abe344e81f",
@@ -740,7 +950,10 @@
       "children": ["e45a7eec-b746-4920-8eec-26e0fa4654c0"],
       "lived": "",
       "x": 2950.5,
-      "y": 483
+      "y": 483,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "58cfa960-15f3-47ea-8fe9-d9babc796ccc",
@@ -749,7 +962,10 @@
       "children": ["e45a7eec-b746-4920-8eec-26e0fa4654c0"],
       "lived": "",
       "x": 2735.5,
-      "y": 483
+      "y": 483,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c932060e-d272-45d5-9af9-811ef998846e",
@@ -758,7 +974,10 @@
       "children": ["a991a34a-eb23-431c-b361-481990cae121"],
       "lived": "1911-1987",
       "x": 3448.5,
-      "y": 697
+      "y": 697,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "dd1219c3-b055-4de0-94ef-84837bf4c09f",
@@ -767,7 +986,10 @@
       "children": ["a991a34a-eb23-431c-b361-481990cae121"],
       "lived": "1913-1966",
       "x": 3177.5,
-      "y": 697
+      "y": 697,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "f6729cc1-9bbd-4065-ac66-6edb3247169a",
@@ -776,7 +998,10 @@
       "children": ["c932060e-d272-45d5-9af9-811ef998846e"],
       "lived": "",
       "x": 3844,
-      "y": 483
+      "y": 483,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e54a102e-f629-421b-a05d-81592f54c8e3",
@@ -785,7 +1010,10 @@
       "children": ["c932060e-d272-45d5-9af9-811ef998846e"],
       "lived": "",
       "x": 3614.5,
-      "y": 483
+      "y": 483,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "8f0521d9-9f2d-400e-b49a-9881c7bd19c1",
@@ -794,7 +1022,10 @@
       "children": ["dd1219c3-b055-4de0-94ef-84837bf4c09f"],
       "lived": "",
       "x": 3383.5,
-      "y": 483
+      "y": 483,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "f2a0b8d2-0548-49b7-9223-bbaa7f96a938",
@@ -803,7 +1034,10 @@
       "children": ["dd1219c3-b055-4de0-94ef-84837bf4c09f"],
       "lived": "",
       "x": 3182.5,
-      "y": 483
+      "y": 483,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "3d7d46e5-edd1-4052-a2ef-780858d07e49",
@@ -812,7 +1046,10 @@
       "children": ["3ff70977-2ec9-4b2f-a138-82aa9935d55a"],
       "lived": "",
       "x": 708.5,
-      "y": 460
+      "y": 460,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "7b6e6e35-b217-497c-be48-3a5e0e1eb5fb",
@@ -821,7 +1058,10 @@
       "children": ["3ff70977-2ec9-4b2f-a138-82aa9935d55a"],
       "lived": "",
       "x": 493.5,
-      "y": 460
+      "y": 460,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     }
   ]
 }

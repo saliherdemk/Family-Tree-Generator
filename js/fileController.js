@@ -28,6 +28,7 @@ class FileController {
 
     for (let i = 0; i < nodes.length; i++) {
       const node = nodes[i];
+      console.log(node);
 
       var children = [];
       if (node.links.length) {
@@ -43,6 +44,9 @@ class FileController {
         lived: node.lived,
         x: node.x,
         y: node.y,
+        boxColor: node.boxColor,
+        strokeColor: node.strokeColor,
+        textColor: node.textColor,
       };
       obj.push(newObj);
     }
@@ -71,7 +75,13 @@ class FileController {
 
       newNode.setSpouses(element.spouseIds);
       newNode.setChildren(element.children);
-      newNode.nodeUpdate(element.name, element.lived);
+      newNode.nodeUpdate(
+        element.name,
+        element.lived,
+        element.boxColor,
+        element.strokeColor,
+        element.textColor
+      );
       this.addNewNode(newNode);
     }
   }

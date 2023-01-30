@@ -13,6 +13,7 @@ class Link {
   }
 
   setMidColor() {
+    console.log(this.source);
     let clr1 = hexToRgb(this.source.strokeColor);
     let clr2 = hexToRgb(this.target.strokeColor);
     let newValues = [];

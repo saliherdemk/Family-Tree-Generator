@@ -6,11 +6,11 @@
       "spouseIds": ["7d7c1e34-8dee-441f-8626-14842d2844fc"],
       "children": ["775c47a2-2562-41ab-83c5-8b5016477fb5"],
       "lived": "",
-      "x": -751,
-      "y": 290,
+      "x": -4590,
+      "y": 448,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "7d7c1e34-8dee-441f-8626-14842d2844fc",
@@ -21,11 +21,11 @@
       ],
       "children": ["775c47a2-2562-41ab-83c5-8b5016477fb5"],
       "lived": "",
-      "x": -534,
-      "y": 288,
+      "x": -4373,
+      "y": 446,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "775c47a2-2562-41ab-83c5-8b5016477fb5",
@@ -33,11 +33,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": -657,
-      "y": 545,
+      "x": -4496,
+      "y": 703,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "a575184e-cd50-4ac9-a3c1-a03ee50e56a8",
@@ -45,11 +45,11 @@
       "spouseIds": ["7d7c1e34-8dee-441f-8626-14842d2844fc"],
       "children": [],
       "lived": "",
-      "x": -317,
-      "y": 281,
+      "x": -4156,
+      "y": 439,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "6b47d28e-3b01-4e8a-802e-9534f2b9cc8b",
@@ -62,11 +62,11 @@
         "d8e78962-d662-4b48-ab55-c4064d4910cd"
       ],
       "lived": "",
-      "x": -419,
-      "y": 46,
+      "x": -4602,
+      "y": 172,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "def2b07b-6409-44cd-aa64-d4e435f19192",
@@ -79,11 +79,11 @@
         "d8e78962-d662-4b48-ab55-c4064d4910cd"
       ],
       "lived": "",
-      "x": -209,
-      "y": 46,
+      "x": -4392,
+      "y": 172,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "ce999fca-90ce-4525-8e4d-48083de00631",
@@ -97,11 +97,11 @@
         "00eec170-f81e-4d82-bbc2-272c7c0ba2fb"
       ],
       "lived": "",
-      "x": 550,
-      "y": 290,
+      "x": -3289,
+      "y": 448,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "a7495715-190b-4207-aa25-9e5d6ead364e",
@@ -109,11 +109,11 @@
       "spouseIds": ["e0d81db7-5893-4cdd-aa81-baae23871cc4"],
       "children": ["b6fd0401-7c17-4cf2-a635-c5f2ee99b074"],
       "lived": "",
-      "x": -181,
-      "y": 572,
+      "x": -4020,
+      "y": 730,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e0d81db7-5893-4cdd-aa81-baae23871cc4",
@@ -121,11 +121,11 @@
       "spouseIds": ["a7495715-190b-4207-aa25-9e5d6ead364e"],
       "children": ["b6fd0401-7c17-4cf2-a635-c5f2ee99b074"],
       "lived": "",
-      "x": 31,
-      "y": 572,
+      "x": -3808,
+      "y": 730,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "4661dcf3-6d33-46b6-943e-5105e26ee24c",
@@ -133,11 +133,11 @@
       "spouseIds": ["ab294915-79de-4b9d-96e3-7c13d2f2ac2e"],
       "children": ["e0d81db7-5893-4cdd-aa81-baae23871cc4"],
       "lived": "",
-      "x": 120,
-      "y": 286,
+      "x": -3719,
+      "y": 444,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "ab294915-79de-4b9d-96e3-7c13d2f2ac2e",
@@ -145,11 +145,11 @@
       "spouseIds": ["4661dcf3-6d33-46b6-943e-5105e26ee24c"],
       "children": ["e0d81db7-5893-4cdd-aa81-baae23871cc4"],
       "lived": "",
-      "x": -76,
-      "y": 286,
+      "x": -3915,
+      "y": 444,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "03d260af-c380-4b29-a8d1-92ddc26dfc3a",
@@ -163,11 +163,11 @@
         "00eec170-f81e-4d82-bbc2-272c7c0ba2fb"
       ],
       "lived": "",
-      "x": 762,
-      "y": 290,
+      "x": -3077,
+      "y": 448,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "74bca3da-a7a1-4b11-ba51-5f32c741f007",
@@ -180,11 +180,11 @@
         "543c05dc-c1d4-4405-94fc-72dd5e2071dc"
       ],
       "lived": "",
-      "x": 1217,
-      "y": 53,
+      "x": -2398,
+      "y": 193,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "747baa5e-e33d-48da-a861-951528d39931",
@@ -197,11 +197,11 @@
         "543c05dc-c1d4-4405-94fc-72dd5e2071dc"
       ],
       "lived": "",
-      "x": 863,
-      "y": 53,
+      "x": -2752,
+      "y": 193,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "04a08e1b-8b21-46d5-bf7b-fbcdd0e294cb",
@@ -209,11 +209,11 @@
       "spouseIds": ["49b9d188-0770-48e9-bff3-d68979ed3fb4"],
       "children": ["b46f4201-cd96-4d7e-b973-8783d6638224"],
       "lived": "",
-      "x": 1757,
-      "y": 268,
+      "x": -1701,
+      "y": 396,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "8fc346f2-5447-4a60-b606-d878679ce93d",
@@ -221,11 +221,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 1192.5,
-      "y": 290,
+      "x": -2260.5,
+      "y": 448,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "543c05dc-c1d4-4405-94fc-72dd5e2071dc",
@@ -233,11 +233,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 980,
-      "y": 290,
+      "x": -2591,
+      "y": 448,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "ed2be554-f94d-464f-82d9-adcb21993322",
@@ -245,11 +245,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 1714,
-      "y": 707,
+      "x": -1701,
+      "y": 863,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "b0b32c3c-8980-4394-81ea-8a88cb211d1a",
@@ -257,11 +257,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 1517,
-      "y": 707,
+      "x": -1898,
+      "y": 863,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "89fe089b-88c7-4604-87f5-a0e0529704e1",
@@ -269,11 +269,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 1312,
-      "y": 707,
+      "x": -2103,
+      "y": 863,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "fe98001e-8df3-4d73-ba6d-7c58bb841ba0",
@@ -284,11 +284,11 @@
       ],
       "children": [],
       "lived": "",
-      "x": 1103,
-      "y": 714,
+      "x": -2320,
+      "y": 863,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "00eec170-f81e-4d82-bbc2-272c7c0ba2fb",
@@ -296,11 +296,11 @@
       "spouseIds": ["05f9c419-f618-4e31-9665-b62b960dc9ae"],
       "children": [],
       "lived": "",
-      "x": 531,
-      "y": 547,
+      "x": -3308,
+      "y": 705,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "05f9c419-f618-4e31-9665-b62b960dc9ae",
@@ -308,11 +308,11 @@
       "spouseIds": ["00eec170-f81e-4d82-bbc2-272c7c0ba2fb"],
       "children": [],
       "lived": "",
-      "x": 339,
-      "y": 547,
+      "x": -3510,
+      "y": 705,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "5d746c5e-adf0-4bb5-af73-694fe554d047",
@@ -320,11 +320,11 @@
       "spouseIds": ["fe98001e-8df3-4d73-ba6d-7c58bb841ba0"],
       "children": [],
       "lived": "",
-      "x": 797,
-      "y": 724,
+      "x": -2760,
+      "y": 886,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "b9ac2372-fceb-44c8-aece-716b0314dd99",
@@ -332,11 +332,11 @@
       "spouseIds": ["c3a10727-ae19-474b-bef8-d170c6b3ae7c"],
       "children": ["5d746c5e-adf0-4bb5-af73-694fe554d047"],
       "lived": "",
-      "x": 990,
-      "y": 513,
+      "x": -2633,
+      "y": 673,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c3a10727-ae19-474b-bef8-d170c6b3ae7c",
@@ -344,11 +344,11 @@
       "spouseIds": ["b9ac2372-fceb-44c8-aece-716b0314dd99"],
       "children": ["5d746c5e-adf0-4bb5-af73-694fe554d047"],
       "lived": "",
-      "x": 772,
-      "y": 505,
+      "x": -2855,
+      "y": 673,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "a4c436a0-e719-46af-b98a-76f2d68d9ebc",
@@ -356,11 +356,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 400,
-      "y": -280,
+      "x": -3385,
+      "y": -295,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "2accea4f-7dac-4f3b-afa9-105255241cfa",
@@ -373,11 +373,11 @@
         "cc026f66-ef84-48e1-84ef-d0fa847c4016"
       ],
       "lived": "",
-      "x": 492,
-      "y": -495,
+      "x": -3195,
+      "y": -553,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c7c6f447-db66-4b17-8d58-bc3495819d95",
@@ -390,11 +390,11 @@
         "cc026f66-ef84-48e1-84ef-d0fa847c4016"
       ],
       "lived": "",
-      "x": 705,
-      "y": -495,
+      "x": -2920,
+      "y": -553,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "1ef48813-ee45-4392-b84d-c1087c840145",
@@ -402,11 +402,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 1045,
-      "y": -280,
+      "x": -2730,
+      "y": -295,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "022dd85f-743c-472e-9f33-deec8bb52bdb",
@@ -414,11 +414,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 842,
-      "y": -280,
+      "x": -2962,
+      "y": -295,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "cc026f66-ef84-48e1-84ef-d0fa847c4016",
@@ -426,11 +426,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 629,
-      "y": -280,
+      "x": -3178,
+      "y": -295,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "5434afba-63cc-4120-b1d3-05e5c18b2f1d",
@@ -442,11 +442,11 @@
         "9a2cb356-1f5e-45b2-9e2e-20b81cb70a8e"
       ],
       "lived": "",
-      "x": 980,
-      "y": -695,
+      "x": -2577,
+      "y": -931,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "8a20eddd-61cc-465f-b856-8aa886711acd",
@@ -458,11 +458,11 @@
         "9a2cb356-1f5e-45b2-9e2e-20b81cb70a8e"
       ],
       "lived": "",
-      "x": 762,
-      "y": -695,
+      "x": -2795,
+      "y": -931,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "dd8f1fa4-a7a1-4db0-b61e-e0a13aadb09b",
@@ -470,11 +470,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 1166.5,
-      "y": -495,
+      "x": -2458.5,
+      "y": -553,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "9a2cb356-1f5e-45b2-9e2e-20b81cb70a8e",
@@ -482,11 +482,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 940,
-      "y": -495,
+      "x": -2685,
+      "y": -553,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "49b9d188-0770-48e9-bff3-d68979ed3fb4",
@@ -501,11 +501,11 @@
         "40fa943a-d44d-447e-be04-96d28ee05d3f"
       ],
       "lived": "",
-      "x": 2009,
-      "y": 266,
+      "x": -1432,
+      "y": 400,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "b46f4201-cd96-4d7e-b973-8783d6638224",
@@ -513,11 +513,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 1865.5,
-      "y": 513,
+      "x": -1581.5,
+      "y": 669,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "de85fc45-16a2-45b6-9801-fedc3ae2f399",
@@ -529,11 +529,11 @@
         "dac6efc9-9242-4ded-948d-719892639e3e"
       ],
       "lived": "",
-      "x": 2465,
-      "y": -199,
+      "x": -1058,
+      "y": -101,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "1a5a90ec-f7de-4d30-a974-e0c956fce5dc",
@@ -545,11 +545,11 @@
         "dac6efc9-9242-4ded-948d-719892639e3e"
       ],
       "lived": "",
-      "x": 2258,
-      "y": -199,
+      "x": -1263,
+      "y": -101,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "7b9cbe63-2901-4ca9-bf56-4c3a7ce7e354",
@@ -557,11 +557,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 2242.5,
-      "y": 267,
+      "x": -1172.5,
+      "y": 423,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "dac6efc9-9242-4ded-948d-719892639e3e",
@@ -569,11 +569,11 @@
       "spouseIds": ["0d92268d-2fa5-4070-8ace-c4d76fd5274d"],
       "children": ["180b4735-cd8f-4884-9338-916f4135e0d7"],
       "lived": "",
-      "x": 2436.5,
-      "y": 266,
+      "x": -978.5,
+      "y": 422,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "82e81e94-48a9-4264-88a9-bfaf529e1e45",
@@ -587,11 +587,11 @@
         "0f75c698-c60d-424b-80dd-c67838be3b27"
       ],
       "lived": "",
-      "x": 2233,
-      "y": -433,
+      "x": -1142,
+      "y": -432,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "a4c16ac3-b7d7-4cd2-8375-28a90572c9ab",
@@ -605,11 +605,11 @@
         "0f75c698-c60d-424b-80dd-c67838be3b27"
       ],
       "lived": "",
-      "x": 2003,
-      "y": -433,
+      "x": -1354,
+      "y": -432,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "41510c5c-6691-42e6-91ee-64eb67c405df",
@@ -617,14 +617,14 @@
       "spouseIds": ["f4356a26-bc5e-4388-817a-617755bf0f0f"],
       "children": [
         "a4c16ac3-b7d7-4cd2-8375-28a90572c9ab",
-        "d2a1238d-ad24-4a00-a8e1-cb504bb6c05e"
+        "5288a507-edc3-4abd-96c1-f60ae3627d33"
       ],
       "lived": "",
-      "x": 2320,
-      "y": -645,
+      "x": -1097,
+      "y": -703,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "f4356a26-bc5e-4388-817a-617755bf0f0f",
@@ -632,14 +632,14 @@
       "spouseIds": ["41510c5c-6691-42e6-91ee-64eb67c405df"],
       "children": [
         "a4c16ac3-b7d7-4cd2-8375-28a90572c9ab",
-        "d2a1238d-ad24-4a00-a8e1-cb504bb6c05e"
+        "5288a507-edc3-4abd-96c1-f60ae3627d33"
       ],
       "lived": "",
-      "x": 2099,
-      "y": -645,
+      "x": -1316,
+      "y": -703,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "22ada8d7-f1fe-4e5c-a517-30faed22d769",
@@ -650,11 +650,11 @@
         "a63a6ca2-dba4-4134-a16c-fcecb0a211be"
       ],
       "lived": "",
-      "x": 2113,
-      "y": -845,
+      "x": -1304,
+      "y": -903,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "bd886485-c09a-4721-9f15-321c0db803ee",
@@ -665,11 +665,11 @@
         "a63a6ca2-dba4-4134-a16c-fcecb0a211be"
       ],
       "lived": "",
-      "x": 1911,
-      "y": -845,
+      "x": -1506,
+      "y": -903,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "a63a6ca2-dba4-4134-a16c-fcecb0a211be",
@@ -677,11 +677,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 1830,
-      "y": -645,
+      "x": -1587,
+      "y": -703,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "6ba1489c-01a4-4f0d-9766-844ae9ec03f8",
@@ -689,11 +689,11 @@
       "spouseIds": ["80e6c4cb-ca19-4269-a56c-e54cf2dfc6e2"],
       "children": ["bd886485-c09a-4721-9f15-321c0db803ee"],
       "lived": "",
-      "x": 2056,
-      "y": -1073,
+      "x": -1361,
+      "y": -1131,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "80e6c4cb-ca19-4269-a56c-e54cf2dfc6e2",
@@ -701,11 +701,11 @@
       "spouseIds": ["6ba1489c-01a4-4f0d-9766-844ae9ec03f8"],
       "children": ["bd886485-c09a-4721-9f15-321c0db803ee"],
       "lived": "",
-      "x": 1797,
-      "y": -1073,
+      "x": -1620,
+      "y": -1131,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c875e4e3-af18-4fa4-8558-92e9cf642cc8",
@@ -717,11 +717,11 @@
         "708d3d69-3bbf-41a6-9ef7-6de8dede87b0"
       ],
       "lived": "",
-      "x": 3152.5,
-      "y": 4,
+      "x": -262.5,
+      "y": 160,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "5fb1f0b9-3a83-4c8a-8637-0d5d766f5cce",
@@ -733,11 +733,11 @@
         "708d3d69-3bbf-41a6-9ef7-6de8dede87b0"
       ],
       "lived": "",
-      "x": 3374.5,
-      "y": 4,
+      "x": -40.5,
+      "y": 160,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "10ff711d-7f4b-484a-9b76-ee60514decf8",
@@ -748,11 +748,11 @@
         "ed76c27b-42b0-4d7e-9220-367c765cb7f3"
       ],
       "lived": "",
-      "x": 2955.5,
-      "y": 216,
+      "x": -459.5,
+      "y": 372,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "7f33df6f-02d2-4e3e-b114-ee300a54a8ab",
@@ -767,11 +767,11 @@
         "94bb01a7-c1d2-4d8e-8790-ee260f9c996d"
       ],
       "lived": "",
-      "x": 3685.5,
-      "y": 226,
+      "x": 449,
+      "y": 382,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e971cdf3-0a72-44b9-8ed6-2864b2fb3dff",
@@ -782,11 +782,11 @@
         "ed76c27b-42b0-4d7e-9220-367c765cb7f3"
       ],
       "lived": "",
-      "x": 3165.5,
-      "y": 216,
+      "x": -249.5,
+      "y": 372,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "cccdc3c5-a782-4b0c-9a72-67fa9512a430",
@@ -794,11 +794,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 2919.5,
-      "y": 463,
+      "x": -495.5,
+      "y": 619,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "b31b910c-8e8a-45d2-8d13-b7fae0b4d137",
@@ -814,11 +814,11 @@
         "6f96c5bf-a0cb-48da-b51b-1addbc6fa23c"
       ],
       "lived": "",
-      "x": 4193,
-      "y": 240,
+      "x": 764,
+      "y": 396,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "52b08eba-7d54-447a-b99b-cbb45e9e1598",
@@ -830,11 +830,11 @@
         "e17f48fa-ee04-4c4e-a772-44c8702b2b29"
       ],
       "lived": "",
-      "x": 4462.5,
-      "y": -87,
+      "x": 1047.5,
+      "y": 69,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e9bda258-7dcb-44a4-86ff-9a706df28e4e",
@@ -846,11 +846,11 @@
         "e17f48fa-ee04-4c4e-a772-44c8702b2b29"
       ],
       "lived": "",
-      "x": 4676.5,
-      "y": -87,
+      "x": 1261.5,
+      "y": 69,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "4de96803-4b0d-43a3-9163-2a76c1c07bdc",
@@ -862,11 +862,11 @@
         "6f96c5bf-a0cb-48da-b51b-1addbc6fa23c"
       ],
       "lived": "",
-      "x": 4410,
-      "y": 240,
+      "x": 1001,
+      "y": 372,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "a029da67-7737-4dad-b6b7-4d8b545b3224",
@@ -874,11 +874,11 @@
       "spouseIds": ["45a1254e-a4e3-4650-8217-7805ce22eb53"],
       "children": [],
       "lived": "",
-      "x": 4638.5,
-      "y": 572,
+      "x": 1293.5,
+      "y": 728,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#977aff",
+      "textColor": "#000000"
     },
     {
       "id": "ec676ad8-825f-4ce2-8526-80c39a05159c",
@@ -886,11 +886,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 4152,
-      "y": 572,
+      "x": 807,
+      "y": 728,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "45a1254e-a4e3-4650-8217-7805ce22eb53",
@@ -902,11 +902,11 @@
       ],
       "children": [],
       "lived": "",
-      "x": 5122,
-      "y": 572,
+      "x": 1707,
+      "y": 728,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#00ffd5",
+      "textColor": "#000000"
     },
     {
       "id": "708d3d69-3bbf-41a6-9ef7-6de8dede87b0",
@@ -914,11 +914,11 @@
       "spouseIds": ["45a1254e-a4e3-4650-8217-7805ce22eb53"],
       "children": [],
       "lived": "",
-      "x": 3443,
-      "y": 635,
+      "x": 28,
+      "y": 791,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#fc5cff",
+      "textColor": "#000000"
     },
     {
       "id": "6f96c5bf-a0cb-48da-b51b-1addbc6fa23c",
@@ -926,11 +926,11 @@
       "spouseIds": ["45a1254e-a4e3-4650-8217-7805ce22eb53"],
       "children": [],
       "lived": "",
-      "x": 4410,
-      "y": 572,
+      "x": 1064,
+      "y": 728,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#c7ee3a",
+      "textColor": "#000000"
     },
     {
       "id": "a4a70154-0405-4fb6-ba07-6fa62a407de7",
@@ -941,11 +941,11 @@
         "8c3fe713-16cf-4260-a001-68c39d6a8de9"
       ],
       "lived": "",
-      "x": 5735,
-      "y": 345,
+      "x": 2320,
+      "y": 501,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e1d16411-5ec5-472f-8517-b5e34a4b48cf",
@@ -956,11 +956,11 @@
         "8c3fe713-16cf-4260-a001-68c39d6a8de9"
       ],
       "lived": "",
-      "x": 5521,
-      "y": 345,
+      "x": 2106,
+      "y": 501,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "8c3fe713-16cf-4260-a001-68c39d6a8de9",
@@ -968,11 +968,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 5767,
-      "y": 578,
+      "x": 2352,
+      "y": 734,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "06a8750c-a43d-4b76-9d27-5f9f7240de34",
@@ -980,11 +980,11 @@
       "spouseIds": ["23e1c5b0-1458-45cd-852e-f662fc1e19ee"],
       "children": ["e1d16411-5ec5-472f-8517-b5e34a4b48cf"],
       "lived": "",
-      "x": 5975,
-      "y": 104,
+      "x": 2560,
+      "y": 260,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "23e1c5b0-1458-45cd-852e-f662fc1e19ee",
@@ -992,11 +992,11 @@
       "spouseIds": ["06a8750c-a43d-4b76-9d27-5f9f7240de34"],
       "children": ["e1d16411-5ec5-472f-8517-b5e34a4b48cf"],
       "lived": "",
-      "x": 5735,
-      "y": 111,
+      "x": 2320,
+      "y": 267,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "38883067-e75a-4a19-b8fd-5eadf0e60163",
@@ -1007,11 +1007,11 @@
         "40fa943a-d44d-447e-be04-96d28ee05d3f"
       ],
       "lived": "",
-      "x": 2805,
-      "y": 1298,
+      "x": -610,
+      "y": 1454,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "cf5c0e75-e76c-45b4-bdd6-c0363d8ae88d",
@@ -1023,11 +1023,11 @@
         "4c59520f-c8d7-4a95-9ae7-551b22070ba0"
       ],
       "lived": "",
-      "x": 2931,
-      "y": 875,
+      "x": -484,
+      "y": 1031,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "360c40fc-45db-48b8-8f33-31eab2bddf22",
@@ -1039,11 +1039,11 @@
         "4c59520f-c8d7-4a95-9ae7-551b22070ba0"
       ],
       "lived": "",
-      "x": 2709,
-      "y": 875,
+      "x": -706,
+      "y": 1031,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "894d994f-c01f-4ec5-aa2a-08289100303c",
@@ -1051,11 +1051,11 @@
       "spouseIds": ["6d86c99a-9ea7-4033-b220-cc2739321683"],
       "children": ["edf2b99e-3da8-4f27-a25b-76b36582f530"],
       "lived": "",
-      "x": 2533,
-      "y": 1084,
+      "x": -888,
+      "y": 1240,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "4c59520f-c8d7-4a95-9ae7-551b22070ba0",
@@ -1072,11 +1072,11 @@
         "e3a0cdcc-c5e9-4204-91b6-1e417eb7ea40"
       ],
       "lived": "",
-      "x": 3509,
-      "y": 1094,
+      "x": 94,
+      "y": 1250,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "6d86c99a-9ea7-4033-b220-cc2739321683",
@@ -1084,11 +1084,11 @@
       "spouseIds": ["894d994f-c01f-4ec5-aa2a-08289100303c"],
       "children": ["edf2b99e-3da8-4f27-a25b-76b36582f530"],
       "lived": "",
-      "x": 2305,
-      "y": 1062,
+      "x": -1114,
+      "y": 1240,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "edf2b99e-3da8-4f27-a25b-76b36582f530",
@@ -1096,11 +1096,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 2402,
-      "y": 1298,
+      "x": -1017,
+      "y": 1454,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c44d97b1-6251-4d57-83ed-760ee9b038d6",
@@ -1111,11 +1111,11 @@
         "98508ab3-26c5-43fe-9517-1545de76a3a8"
       ],
       "lived": "",
-      "x": 3825,
-      "y": 1094,
+      "x": 404,
+      "y": 1250,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "6d010fac-24d8-4a0a-bfe9-fa8d6e3d3224",
@@ -1127,11 +1127,11 @@
         "e3a0cdcc-c5e9-4204-91b6-1e417eb7ea40"
       ],
       "lived": "",
-      "x": 3217,
-      "y": 1094,
+      "x": -198,
+      "y": 1250,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "8112f376-2fbe-49f0-afbd-3dcbc8ee6ccd",
@@ -1139,11 +1139,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 3443,
-      "y": 1402,
+      "x": 28,
+      "y": 1558,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e27cc040-bce8-4f92-9185-a06c10479118",
@@ -1151,11 +1151,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 3231,
-      "y": 1402,
+      "x": -184,
+      "y": 1558,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e3a0cdcc-c5e9-4204-91b6-1e417eb7ea40",
@@ -1163,11 +1163,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 3025,
-      "y": 1402,
+      "x": -390,
+      "y": 1558,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "59eb61fc-9a6c-41b8-8ab2-018660ead4e9",
@@ -1175,11 +1175,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 3652,
-      "y": 1402,
+      "x": 233,
+      "y": 1558,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "98508ab3-26c5-43fe-9517-1545de76a3a8",
@@ -1187,11 +1187,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 3864,
-      "y": 1402,
+      "x": 449,
+      "y": 1558,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "cb198f8e-c794-4f94-93b7-77fb9ec4cfb6",
@@ -1202,11 +1202,11 @@
         "d0a816bd-c815-4d4c-a05c-1ee8ca27f9e1"
       ],
       "lived": "",
-      "x": 3163,
-      "y": 629,
+      "x": -252,
+      "y": 785,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "f17c4c44-990f-42d0-b066-dc1f2c6ce1f8",
@@ -1217,11 +1217,11 @@
         "d0a816bd-c815-4d4c-a05c-1ee8ca27f9e1"
       ],
       "lived": "",
-      "x": 2893,
-      "y": 629,
+      "x": -522,
+      "y": 785,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "d0a816bd-c815-4d4c-a05c-1ee8ca27f9e1",
@@ -1229,11 +1229,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 3208,
-      "y": 875,
+      "x": -207,
+      "y": 1031,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "0319d8a9-aae1-4e8a-8430-db74eb6bf7ae",
@@ -1241,11 +1241,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 2559,
-      "y": 1614,
+      "x": -856,
+      "y": 1770,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "40fa943a-d44d-447e-be04-96d28ee05d3f",
@@ -1253,11 +1253,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 2221,
-      "y": 1614,
+      "x": -1194,
+      "y": 1770,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "49004cef-7a63-48eb-afa1-6e2a2df3a187",
@@ -1268,11 +1268,11 @@
         "90ed4c03-59cd-426b-a0d9-a503fcfb2009"
       ],
       "lived": "",
-      "x": -9,
-      "y": -174,
+      "x": -4192,
+      "y": -48,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "b5f293ba-e2ef-4254-bb34-d463f725508a",
@@ -1283,11 +1283,11 @@
         "90ed4c03-59cd-426b-a0d9-a503fcfb2009"
       ],
       "lived": "",
-      "x": -235,
-      "y": -174,
+      "x": -4418,
+      "y": -48,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "90ed4c03-59cd-426b-a0d9-a503fcfb2009",
@@ -1295,11 +1295,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 23,
-      "y": 46,
+      "x": -4160,
+      "y": 172,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "b6fd0401-7c17-4cf2-a635-c5f2ee99b074",
@@ -1307,11 +1307,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": -38,
-      "y": 822,
+      "x": -3877,
+      "y": 980,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "d8e78962-d662-4b48-ab55-c4064d4910cd",
@@ -1319,11 +1319,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 345,
-      "y": 290,
+      "x": -3494,
+      "y": 448,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e17f48fa-ee04-4c4e-a772-44c8702b2b29",
@@ -1334,11 +1334,11 @@
       ],
       "children": [],
       "lived": "",
-      "x": 4809,
-      "y": 1810,
+      "x": 1394,
+      "y": 1966,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "0d92268d-2fa5-4070-8ace-c4d76fd5274d",
@@ -1346,11 +1346,11 @@
       "spouseIds": ["dac6efc9-9242-4ded-948d-719892639e3e"],
       "children": ["180b4735-cd8f-4884-9338-916f4135e0d7"],
       "lived": "",
-      "x": 2631.5,
-      "y": 266,
+      "x": -783.5,
+      "y": 422,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "180b4735-cd8f-4884-9338-916f4135e0d7",
@@ -1358,11 +1358,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 2518,
-      "y": 513,
+      "x": -897,
+      "y": 669,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e1af692d-499d-480e-bfdf-e795100f5d44",
@@ -1370,11 +1370,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 2058,
-      "y": -199,
+      "x": -1483,
+      "y": -101,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "50cdabd8-4785-4edc-bd7f-b849b2d2d52a",
@@ -1382,11 +1382,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 1847,
-      "y": -199,
+      "x": -1692,
+      "y": -101,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "0f75c698-c60d-424b-80dd-c67838be3b27",
@@ -1394,11 +1394,11 @@
       "spouseIds": ["7ff22524-630f-4cc2-9082-de3772c46871"],
       "children": ["c875e4e3-af18-4fa4-8558-92e9cf642cc8"],
       "lived": "",
-      "x": 2702,
-      "y": -203,
+      "x": -689.5,
+      "y": -105,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "7ff22524-630f-4cc2-9082-de3772c46871",
@@ -1406,23 +1406,23 @@
       "spouseIds": ["0f75c698-c60d-424b-80dd-c67838be3b27"],
       "children": ["c875e4e3-af18-4fa4-8558-92e9cf642cc8"],
       "lived": "",
-      "x": 2946,
-      "y": -203,
+      "x": -459.5,
+      "y": -105,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "ed76c27b-42b0-4d7e-9220-367c765cb7f3",
       "name": "Edric Baratheon",
       "spouseIds": [],
       "children": [],
-      "lived": "????-????",
-      "x": 3109.5,
-      "y": 463,
+      "lived": "",
+      "x": -305.5,
+      "y": 619,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "4001077d-bd67-48c7-a151-4c1341f7c756",
@@ -1433,11 +1433,11 @@
         "94bb01a7-c1d2-4d8e-8790-ee260f9c996d"
       ],
       "lived": "????-????",
-      "x": 3890,
-      "y": 226,
+      "x": 203,
+      "y": 382,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "0b695e96-1f8a-4e6e-b9fa-8561ec6fa7ea",
@@ -1445,35 +1445,35 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 4017.25,
-      "y": 458,
+      "x": 596.25,
+      "y": 642,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "495da65f-ebfe-40b2-baba-6df99765d682",
       "name": "GENDRY BARATHEON",
       "spouseIds": [],
       "children": [],
-      "lived": "????-????",
-      "x": 3603.75,
-      "y": 492,
+      "lived": "",
+      "x": 178.75,
+      "y": 648,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "94bb01a7-c1d2-4d8e-8790-ee260f9c996d",
       "name": "BARRA",
       "spouseIds": [],
       "children": [],
-      "lived": "????-????",
-      "x": 3804.75,
-      "y": 492,
+      "lived": "",
+      "x": 379.75,
+      "y": 648,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "6cba460b-5ea2-4391-a5da-b6669299bc7d",
@@ -1487,11 +1487,11 @@
         "53f9348e-c444-4dfd-a6fb-14b6da1e0d43"
       ],
       "lived": "",
-      "x": 5502.5,
-      "y": -507,
+      "x": 2087.5,
+      "y": -351,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "160e0548-2694-4c48-a0b9-f8389bb4a5a4",
@@ -1505,11 +1505,11 @@
         "53f9348e-c444-4dfd-a6fb-14b6da1e0d43"
       ],
       "lived": "",
-      "x": 5280.5,
-      "y": -507,
+      "x": 1865.5,
+      "y": -351,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "e6f4e9c3-b311-4690-9971-999a0c9ac606",
@@ -1521,11 +1521,11 @@
         "2285182b-79a7-4b76-855f-1f263476831b"
       ],
       "lived": "",
-      "x": 5052.5,
-      "y": -101,
+      "x": 1637.5,
+      "y": 55,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "94aa84e7-8eba-4998-bd6e-08a20277d002",
@@ -1537,11 +1537,11 @@
         "2285182b-79a7-4b76-855f-1f263476831b"
       ],
       "lived": "",
-      "x": 5252.5,
-      "y": -101,
+      "x": 1837.5,
+      "y": 55,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "274e47f4-ab69-4526-9e1e-b8b91ea104b8",
@@ -1549,11 +1549,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 5335.5,
-      "y": 171,
+      "x": 1920.5,
+      "y": 327,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "994d1401-0876-437f-b80e-0c1a2cfd3075",
@@ -1561,11 +1561,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 5137.5,
-      "y": 171,
+      "x": 1722.5,
+      "y": 327,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "2285182b-79a7-4b76-855f-1f263476831b",
@@ -1573,11 +1573,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 4935.5,
-      "y": 171,
+      "x": 1520.5,
+      "y": 327,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c4371dc7-25f7-455c-b03d-cb89e9a1e046",
@@ -1585,11 +1585,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 5888.5,
-      "y": -103,
+      "x": 2473.5,
+      "y": 53,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "12ab4f3a-4a99-4560-8cfa-e256f2752456",
@@ -1597,11 +1597,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 5686.5,
-      "y": -103,
+      "x": 2271.5,
+      "y": 53,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "53f9348e-c444-4dfd-a6fb-14b6da1e0d43",
@@ -1609,11 +1609,11 @@
       "spouseIds": [],
       "children": [],
       "lived": "",
-      "x": 5476.5,
-      "y": -103,
+      "x": 2061.5,
+      "y": 53,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "eb71fb6c-2fe0-4958-8e93-457576722ffc",
@@ -1621,17 +1621,17 @@
       "spouseIds": ["0d714873-f735-4c4b-a960-faddb6ff2895"],
       "children": [
         "160e0548-2694-4c48-a0b9-f8389bb4a5a4",
-        "ee9d10bb-e760-4c65-aa94-3ec98a100dc4",
+        "196ed473-0b7c-48d6-bd38-ed2890d8c9e0",
         "a5c8eb98-aeb3-4cc4-b87c-c99a036bcc81",
-        "e70c1892-536e-434d-824c-9d394a5f8079",
+        "7881ad15-260c-4eb5-9470-584ef902f06a",
         "7ffa84c6-cf51-43b0-9c33-0642fdeb1192"
       ],
       "lived": "",
-      "x": 5252.5,
-      "y": -743,
+      "x": 1837.5,
+      "y": -587,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "0d714873-f735-4c4b-a960-faddb6ff2895",
@@ -1639,17 +1639,17 @@
       "spouseIds": ["eb71fb6c-2fe0-4958-8e93-457576722ffc"],
       "children": [
         "160e0548-2694-4c48-a0b9-f8389bb4a5a4",
-        "ee9d10bb-e760-4c65-aa94-3ec98a100dc4",
+        "196ed473-0b7c-48d6-bd38-ed2890d8c9e0",
         "a5c8eb98-aeb3-4cc4-b87c-c99a036bcc81",
-        "e70c1892-536e-434d-824c-9d394a5f8079",
+        "7881ad15-260c-4eb5-9470-584ef902f06a",
         "7ffa84c6-cf51-43b0-9c33-0642fdeb1192"
       ],
       "lived": "",
-      "x": 5052.5,
-      "y": -743,
+      "x": 1637.5,
+      "y": -587,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "a5c8eb98-aeb3-4cc4-b87c-c99a036bcc81",
@@ -1657,11 +1657,11 @@
       "spouseIds": ["c1cbb7db-d1a5-4cb2-8859-aeb7d610319c"],
       "children": [],
       "lived": "",
-      "x": 5023.5,
-      "y": -531,
+      "x": 1608.5,
+      "y": -375,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "c1cbb7db-d1a5-4cb2-8859-aeb7d610319c",
@@ -1672,11 +1672,11 @@
       ],
       "children": [],
       "lived": "",
-      "x": 4815,
-      "y": -531,
+      "x": 1400,
+      "y": -375,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "7ffa84c6-cf51-43b0-9c33-0642fdeb1192",
@@ -1684,11 +1684,11 @@
       "spouseIds": ["c1cbb7db-d1a5-4cb2-8859-aeb7d610319c"],
       "children": [],
       "lived": "",
-      "x": 4479,
-      "y": -531,
+      "x": 1064,
+      "y": -375,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     },
     {
       "id": "1ed51ac0-82f2-492a-9069-102cb016c570",
@@ -1696,11 +1696,47 @@
       "spouseIds": ["e17f48fa-ee04-4c4e-a772-44c8702b2b29"],
       "children": [],
       "lived": "",
-      "x": 5017.5,
-      "y": 1834,
+      "x": 1608.5,
+      "y": 1994,
       "boxColor": "#ffffff",
-      "StrokeColor": "#000000",
-      "TextColor": "#000000"
+      "strokeColor": "#000000",
+      "textColor": "#000000"
+    },
+    {
+      "id": "5288a507-edc3-4abd-96c1-f60ae3627d33",
+      "name": "Unknown",
+      "spouseIds": [],
+      "children": [],
+      "lived": "",
+      "x": -1569,
+      "y": -432,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
+    },
+    {
+      "id": "196ed473-0b7c-48d6-bd38-ed2890d8c9e0",
+      "name": "Unknown",
+      "spouseIds": [],
+      "children": [],
+      "lived": "",
+      "x": 833,
+      "y": -375,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
+    },
+    {
+      "id": "7881ad15-260c-4eb5-9470-584ef902f06a",
+      "name": "Unknown",
+      "spouseIds": [],
+      "children": [],
+      "lived": "",
+      "x": 631,
+      "y": -375,
+      "boxColor": "#ffffff",
+      "strokeColor": "#000000",
+      "textColor": "#000000"
     }
   ]
 }
