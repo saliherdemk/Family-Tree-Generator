@@ -28,7 +28,6 @@ class FileController {
 
     for (let i = 0; i < nodes.length; i++) {
       const node = nodes[i];
-      console.log(node);
 
       var children = [];
       if (node.links.length) {

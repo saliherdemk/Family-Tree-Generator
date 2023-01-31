@@ -160,18 +160,20 @@ class Node extends Draggable {
       el.remove();
     });
 
-    this.links
-      .find((link) => link.type === "children")
-      ?.source.removeChildren(this.id);
-
-    this.spouses.forEach((spouse) => {
-      spouse.removeSpouse(this);
-    });
-
     for (let i = 0; i < this.links.length; i++) {
       const link = this.links[i];
       link.remove(true);
     }
+
+    this.links
+      .find((link) => link.type === "children")
+      ?.source.removeChildren(this);
+
+    console.log(this.links);
+
+    this.spouses.forEach((spouse) => {
+      spouse.removeSpouse(this);
+    });
 
     removeElement(nodes, this);
   }

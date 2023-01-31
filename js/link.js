@@ -13,7 +13,6 @@ class Link {
   }
 
   setMidColor() {
-    console.log(this.source);
     let clr1 = hexToRgb(this.source.strokeColor);
     let clr2 = hexToRgb(this.target.strokeColor);
     let newValues = [];
@@ -122,6 +121,7 @@ class LinkUp {
   }
 
   removeChildren(child, fromNode = true) {
+    console.log(child);
     this.children = this.children.filter((ch) => ch !== child.id);
     if (child instanceof Node && fromNode) {
       let link = child.links.find((lnk) => lnk.type === "children");

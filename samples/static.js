@@ -52,6 +52,9 @@ class FileController {
         lived: node.lived,
         x: node.x,
         y: node.y,
+        boxColor: node.boxColor,
+        strokeColor: node.strokeColor,
+        textColor: node.textColor,
       };
       obj.push(newObj);
     }
@@ -80,7 +83,13 @@ class FileController {
 
       newNode.setSpouses(element.spouseIds);
       newNode.setChildren(element.children);
-      newNode.nodeUpdate(element.name, element.lived);
+      newNode.nodeUpdate(
+        element.name,
+        element.lived,
+        element.boxColor,
+        element.strokeColor,
+        element.textColor
+      );
       this.addNewNode(newNode);
     }
   }
@@ -163,6 +172,31 @@ function toggleDesignMode() {
   document.querySelector(".options").classList.toggle("hidden");
 }
 
+function gradientLine(x1, y1, x2, y2, color1, color2) {
+  // linear gradient from start to end of line
+  var grad = this.drawingContext.createLinearGradient(x1, y1, x2, y2);
+  grad.addColorStop(0, color1);
+  grad.addColorStop(1, color2);
+
+  this.drawingContext.strokeStyle = grad;
+
+  line(x1, y1, x2, y2);
+}
+
+function hexToRgb(hex) {
+  hex = hex.replace("#", "");
+  var bigint = parseInt(hex, 16);
+  var r = (bigint >> 16) & 255;
+  var g = (bigint >> 8) & 255;
+  var b = bigint & 255;
+
+  return [r, g, b];
+}
+
+function rgbToHex(r, g, b) {
+  return "#" + ((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1);
+}
+
 // CANVAS
 function setup() {
   document.addEventListener("contextmenu", (event) => event.preventDefault());
@@ -171,7 +205,6 @@ function setup() {
   fileController = new FileController();
   fileController.setData(data);
   fileController.importData();
-  readOnly = true;
 }
 
 function draw() {
@@ -228,15 +261,20 @@ class Draggable {
     this.y = y;
   }
 
-  nodeUpdate(name, date) {
+  nodeUpdate(name, date, boxColor, strokeColor, textColor) {
     this.name = name;
     this.lived = date.substring(0, 9);
+    this.boxColor = boxColor;
+    this.strokeColor = strokeColor;
+    this.textColor = textColor;
 
     let newNameBoxHeight = Math.floor(name.trim().length / 18 - 0.01) * 20;
     let newWidth = this.name.split(" ")[0].length * 10;
 
     this.h = 100 + newNameBoxHeight;
     this.w = Math.max(newWidth, 180);
+
+    this.links.find((lnk) => lnk.type === "marriage")?.setMidColor();
   }
 
   update() {
@@ -264,33 +302,45 @@ class Link {
     this.type = type;
     this.linkUp = null;
     this.depth = depth;
+    this.midColor = "#000000";
   }
 
   setLinkUp(link) {
     this.linkUp = link;
   }
 
-  draw() {
-    if (this.type === "marriage") {
-      beginShape();
-      vertex(this.source.x + this.source.w / 2, this.source.y + this.source.h);
-      vertex(
-        this.source.x + this.source.w / 2,
-        this.target.y + this.target.h + 40 * this.depth
-      );
-      vertex(
-        this.target.x + this.target.w / 2,
-        this.target.y + this.target.h + 40 * this.depth
-      );
-      vertex(this.target.x + this.target.w / 2, this.target.y + this.target.h);
+  setMidColor() {
+    let clr1 = hexToRgb(this.source.strokeColor);
+    let clr2 = hexToRgb(this.target.strokeColor);
+    let newValues = [];
+    for (let i = 0; i < clr1.length; i++) {
+      newValues[i] = (clr1[i] + clr2[i]) / 2;
+    }
+    this.midColor = rgbToHex(newValues[0], newValues[1], newValues[2]);
+  }
 
-      endShape();
+  draw() {
+    let source = this.source;
+    let target = this.target;
+    let x2 = target.x + target.w / 2;
+    if (this.type === "marriage") {
+      let x1 = source.x + source.w / 2;
+      let y1 = target.y + target.h + 40 * this.depth;
+
+      stroke(source.strokeColor);
+      line(x1, source.y + source.h, x1, y1);
+      gradientLine(x1, y1, x2, y1, source.strokeColor, target.strokeColor);
+      stroke(target.strokeColor);
+      line(x2, y1, x2, target.y + target.h);
+      stroke(0);
     } else if (this.type === "children") {
+      stroke(this.source.color);
       beginShape();
-      vertex(this.source.x, this.source.y);
-      vertex(this.target.x + this.target.w / 2, this.source.y);
-      vertex(this.target.x + this.target.w / 2, this.target.y);
+      vertex(source.x, source.y);
+      vertex(x2, source.y);
+      vertex(x2, target.y);
       endShape();
+      stroke(0);
     }
   }
 }
@@ -304,6 +354,7 @@ class LinkUp {
     this.r = 20;
     this.links = [];
     this.children = [];
+    this.color = "#000000";
   }
 
   addLink(link) {
@@ -336,6 +387,7 @@ class LinkUp {
       this.sourceLink.target.h +
       40 * this.sourceLink.depth +
       40;
+    this.color = this.sourceLink.midColor;
   }
 
   preDraw() {
@@ -363,6 +415,9 @@ class Node extends Draggable {
     this.children = children;
     this.parents = [];
     this.links = [];
+    this.boxColor = "#ffffff";
+    this.strokeColor = "#000000";
+    this.textColor = "#000000";
   }
 
   initilize(link = null, parents = []) {
@@ -405,6 +460,7 @@ class Node extends Draggable {
     !sp && this.spouses.push(node);
 
     let newLink = new Link(this, node, "marriage", this.spouses.length);
+    newLink.setMidColor();
     links.push(newLink);
     let newLinkUp = new LinkUp(newLink);
     linkUps.push(newLinkUp);
@@ -419,7 +475,7 @@ class Node extends Draggable {
   }
 
   drawText(content, x, y, w) {
-    fill(0);
+    fill(color(this.textColor));
     textSize(18);
     textAlign(CENTER);
     textWrap(WORD);
@@ -432,7 +488,9 @@ class Node extends Draggable {
   }
 
   draw() {
+    fill(color(this.boxColor));
     rect(this.x, this.y, this.w, this.h);
+    noFill();
     noStroke();
     this.drawText(this.name, this.x, this.y + this.h / 4, this.w);
     this.drawText(this.lived, this.x, this.y + this.h - 20, this.w);
