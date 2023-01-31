@@ -11,7 +11,6 @@ class Node extends Draggable {
     this.spouses = spouses;
     this.children = children;
     this.parents = [];
-    this.inputs = [];
     this.buttons = [];
     this.links = [];
     this.boxColor = "#ffffff";
@@ -156,7 +155,7 @@ class Node extends Draggable {
   }
 
   remove() {
-    [...this.buttons, ...this.inputs].forEach((el) => {
+    this.buttons.forEach((el) => {
       el.remove();
     });
 
@@ -164,12 +163,6 @@ class Node extends Draggable {
       const link = this.links[i];
       link.remove(true);
     }
-
-    this.links
-      .find((link) => link.type === "children")
-      ?.source.removeChildren(this);
-
-    console.log(this.links);
 
     this.spouses.forEach((spouse) => {
       spouse.removeSpouse(this);

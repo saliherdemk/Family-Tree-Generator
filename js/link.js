@@ -116,12 +116,10 @@ class LinkUp {
     !ch && nodes.push(newChild);
 
     ch && ch.addLink(newLink);
-    force && ch.buttons[0].attribute("disabled", "");
-    force && ch.buttons[0].addClass("disabled");
+    force && ch.setParents([parent1, parent2]);
   }
 
   removeChildren(child, fromNode = true) {
-    console.log(child);
     this.children = this.children.filter((ch) => ch !== child.id);
     if (child instanceof Node && fromNode) {
       let link = child.links.find((lnk) => lnk.type === "children");

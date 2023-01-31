@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="options">
+      <div class="menu-items-container hide-menu">
+        <button onclick="handleSave('image')" class="btn save-btn">
+          Save as Image
+        </button>
+        <button onclick="handleSave('json')" class="btn save-btn">
+          Save as Json
+        </button>
+      </div>
+      <button class="btn" id="menu-btn" onclick="toggleMenu()">Menu</button>
+    </div>
+
+    <button id="mode-btn" onclick="toggleDesignMode()"></button>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js"
+      integrity="sha512-WJXVjqeINVpi5XXJ2jn0BSCfp0y80IKrYh731gLRnkAS9TKc5KNt/OfLtu+fCueqdWniouJ1ubM+VI/hbo7POQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="datas/greek-myth.js"></script>
+    <script src="static.js"></script>
+  </body>
+</html>
