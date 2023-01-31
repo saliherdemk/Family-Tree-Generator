@@ -123,6 +123,17 @@ body {
   margin-top: -5%;
 }
 
+.samples {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.samples a {
+  color: blue;
+  text-decoration: none;
+}
+
 .img-container {
   float: right;
   margin: 10px;
