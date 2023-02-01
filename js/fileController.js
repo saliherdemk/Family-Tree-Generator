@@ -32,9 +32,16 @@ class FileController {
       var children = [];
       if (node.links.length) {
         children = node.links
-          .map((link) => (link.linkUp ? link.linkUp?.children : []))
+          .map((link) =>
+            link.linkUp
+              ? link.linkUp?.children.filter(
+                  (id) => this.getById(id) !== undefined
+                )
+              : []
+          )
           .reduce((prev, current) => [...prev, ...current]);
       }
+      console.log(children);
       var newObj = {
         id: node.id,
         name: node.name,

@@ -87,7 +87,7 @@ class LinkUp {
       let childNode = nodes.find((node) => node.rollover === true);
       if (childNode) {
         this.removeChildren(childNode);
-        this.addChildren(childNode, true);
+        this.addChildren(childNode);
       }
     }
     this.isActive = false;
@@ -101,7 +101,7 @@ class LinkUp {
     removeElement(this.links, link);
   }
 
-  addChildren(ch = null, force = false) {
+  addChildren(ch = null) {
     let parent1 = this.sourceLink.source;
     let parent2 = this.sourceLink.target;
 
@@ -116,7 +116,6 @@ class LinkUp {
     !ch && nodes.push(newChild);
 
     ch && ch.addLink(newLink);
-    force && ch.setParents([parent1, parent2]);
   }
 
   removeChildren(child, fromNode = true) {
