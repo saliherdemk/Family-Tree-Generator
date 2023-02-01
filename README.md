@@ -1,6 +1,6 @@
 # Family Tree Generator
 
-A website that allows you to create complex family tree. Here is an example of Game of Thrones family tree: [GOT](https://saliherdemk.github.io/Family-Tree-Generator/)
+A website that allows you to create complex family tree. Data can be save as json and tree can be save as image. Here is an example of Game of Thrones family tree: [GOT](https://saliherdemk.github.io/Family-Tree-Generator/samples/got)
 
 [Live Demo](https://saliherdemk.github.io/Family-Tree-Generator/)
 
