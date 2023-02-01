@@ -6,7 +6,7 @@ A website that allows you to create complex family tree. Here is an example of G
 
 # Demo
 
-<img src="https://github.com/saliherdemk/Family-Tree-Generator/blob/master/media/demo.gif" width="550" height="350">
+<img src="https://github.com/saliherdemk/Family-Tree-Generator/blob/master/img/demo.gif" width="550" height="350">
 
 # Contribution
 
