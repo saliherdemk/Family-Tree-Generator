@@ -9,6 +9,13 @@ var fileController;
 var selectMode = false;
 var select;
 var selected = [];
+var zoomLevel = 1;
+var panX = 0;
+var panY = 0;
+var panDragStartMouseX = 0;
+var panDragStartMouseY = 0;
+var panDragStartPanX = 0;
+var panDragStartPanY = 0;
 
 const designBtn = document.getElementById("mode-btn");
 const nameInp = document.getElementById("name-inp");
@@ -17,4 +24,3 @@ const boxColorInp = document.getElementById("box-clr");
 const textColorInp = document.getElementById("text-clr");
 const strokeColorInp = document.getElementById("stroke-clr");
 const popupContainer = document.querySelector(".popup-container");
-const menuBtns = document.querySelectorAll(".btn");

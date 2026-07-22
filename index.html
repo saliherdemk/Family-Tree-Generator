@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="Family Tree Generator" />
     <meta name="keywords" content="Family, Tree, Generator" />
     <link rel="stylesheet" href="style.css" />
@@ -16,33 +16,34 @@
     >
       <img src="img/githubLogo.png" id="github-logo" alt="" />
     </a>
-    <div class="options">
-      <div class="menu-items-container hide-menu">
-        <button onclick="addMember()" class="btn" id="add-member-btn">
+
+    <div class="toolbar" id="toolbar">
+      <input
+        id="fileid"
+        type="file"
+        hidden
+        accept="application/JSON"
+        onchange="importJson(event)"
+      />
+      <div class="toolbar-actions">
+        <button onclick="addMember()" class="toolbar-btn" id="add-member-btn">
           Add Member
         </button>
-        <input
-          id="fileid"
-          type="file"
-          hidden
-          accept="application/JSON"
-          onchange="importJson(event)"
-        />
-        <input
-          type="button"
-          class="btn"
-          id="import-btn"
-          value="Import Json"
-          onclick="trigger()"
-        />
-        <button onclick="handleSave('image')" class="btn save-btn">
-          Save as Image
+        <button class="toolbar-btn" id="import-btn" onclick="trigger()">
+          Import JSON
         </button>
-        <button onclick="handleSave('json')" class="btn save-btn">
-          Save as Json
+        <button onclick="handleSave('image')" class="toolbar-btn save-btn">
+          Save Image
+        </button>
+        <button onclick="handleSave('json')" class="toolbar-btn save-btn">
+          Save JSON
         </button>
       </div>
-      <button class="btn" id="menu-btn" onclick="toggleMenu()">Menu</button>
+      <button class="fab" id="menu-btn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
 
     <div class="popup-container">
@@ -106,7 +107,15 @@
       </div>
     </div>
 
-    <button id="mode-btn" onclick="toggleDesignMode()"></button>
+    <button id="mode-btn" onclick="toggleDesignMode()">
+      <span id="mode-label">Design</span>
+    </button>
+
+    <div id="zoom-controls">
+      <button id="zoom-in-btn" onclick="zoomIn()">+</button>
+      <span id="zoom-display">100%</span>
+      <button id="zoom-out-btn" onclick="zoomOut()">&#8722;</button>
+    </div>
 
     <div class="info-container" onclick="closeInformation()">
       <div class="popup-info">
@@ -123,8 +132,7 @@
             Hold right click and drag mouse to pan
           </ul>
           <ul>
-            You can use default browser zoom by pressing alt + (mouse whell or
-            +/-)
+            Use mouse wheel or the + / - buttons to zoom in and out
           </ul>
           <ul>
             You can change the design mode by pressing the button on the bottom
@@ -136,17 +144,22 @@
           </ul>
         </div>
         <div class="samples">
-          <a
-            href="https://saliherdemk.github.io/Family-Tree-Generator/samples/got"
-            >GOT Family Tree</a
-          >
-          <a
-            href="https://saliherdemk.github.io/Family-Tree-Generator/samples/greek-myth"
-            >Greek Mythology Family Tree</a
-          >
+          <a href="?sample=got">GOT Family Tree</a>
+          <a href="?sample=greek-myth">Greek Mythology Family Tree</a>
         </div>
       </div>
     </div>
+
+    <script>
+      (function () {
+        var sample = new URLSearchParams(window.location.search).get("sample");
+        if (sample) {
+          document.write(
+            '<script src="samples/datas/' + sample + '.js"><\/script>'
+          );
+        }
+      })();
+    </script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js"

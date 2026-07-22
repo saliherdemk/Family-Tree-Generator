@@ -17,8 +17,9 @@ class Select {
 
   draw() {
     if (this.isActive) {
-      let w = mouseX - this.x;
-      let h = mouseY - this.y;
+      let world = screenToWorld(mouseX, mouseY);
+      let w = world.x - this.x;
+      let h = world.y - this.y;
 
       fill(173, 216, 239, 50);
       stroke(173, 216, 230);
@@ -31,8 +32,9 @@ class Select {
   }
 
   pressed() {
-    this.x = mouseX;
-    this.y = mouseY;
+    let world = screenToWorld(mouseX, mouseY);
+    this.x = world.x;
+    this.y = world.y;
     this.isActive = true;
   }
 
@@ -41,14 +43,14 @@ class Select {
   }
 
   addSelectedNodes(w, h) {
-    let absX = mouseX > this.x ? this.x : mouseX;
-    let absY = mouseY > this.y ? this.y : mouseY;
+    let world = screenToWorld(mouseX, mouseY);
+    let absX = world.x > this.x ? this.x : world.x;
+    let absY = world.y > this.y ? this.y : world.y;
 
     w = Math.abs(w);
     h = Math.abs(h);
     for (let i = 0; i < nodes.length; i++) {
       const element = nodes[i];
-      //https://editor.p5js.org/eric/sketches/HkW2DRKnl
 
       if (
         element.x < absX + w &&

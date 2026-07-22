@@ -5,8 +5,6 @@ class Draggable {
     this.buttonsIsShown = false;
     this.offsetX;
     this.offsetY;
-    this.globOffsetX;
-    this.globOffsetY;
     this.selected = false;
   }
 
@@ -15,11 +13,12 @@ class Draggable {
   }
 
   over() {
+    let world = screenToWorld(mouseX, mouseY);
     if (
-      mouseX > this.x &&
-      mouseX < this.x + this.w &&
-      mouseY > this.y &&
-      mouseY < this.y + this.h
+      world.x > this.x &&
+      world.x < this.x + this.w &&
+      world.y > this.y &&
+      world.y < this.y + this.h
     ) {
       this.rollover = true;
     } else {
@@ -33,6 +32,7 @@ class Draggable {
   }
 
   updateSelectedCoordinates() {
+    let world = screenToWorld(mouseX, mouseY);
     for (let i = 0; i < select.selected.length; i++) {
       const element = select.selected[i];
       if (element == this) {
@@ -40,22 +40,19 @@ class Draggable {
       }
       let a = element.x - this.x;
       let b = element.y - this.y;
-      element.x = mouseX + a + this.offsetX;
-      element.y = mouseY + b + this.offsetY;
+      element.x = world.x + a + this.offsetX;
+      element.y = world.y + b + this.offsetY;
     }
   }
 
   updateCoordinates() {
-    if (canvasDragging) {
-      this.x = mouseX + this.globOffsetX;
-      this.y = mouseY + this.globOffsetY;
-    }
     if (this.dragging) {
+      let world = screenToWorld(mouseX, mouseY);
       select.selected.includes(this)
         ? this.updateSelectedCoordinates()
         : select.reset();
-      this.x = mouseX + this.offsetX;
-      this.y = mouseY + this.offsetY;
+      this.x = world.x + this.offsetX;
+      this.y = world.y + this.offsetY;
 
       for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
@@ -71,7 +68,7 @@ class Draggable {
   }
 
   specifyElement() {
-    if (this.rollover) {
+    if (this.rollover && designMode) {
       selectedElementForUpdate = this;
       openPopup();
     }
@@ -94,22 +91,25 @@ class Draggable {
   }
 
   update() {
-    var btnAttrs = [
-      [0, -30, "#22c55e"],
-      [0, this.h + 5, "#38bdf8"],
-      [this.w - 48, this.h + 5, "#f43f5e"],
-      [this.w - 48, -30, "#78716c"],
-    ];
-
     let isFilled = nodes.find(
       (node) => dist(node.x, node.y, this.x, this.y) < 20 && node !== this
     );
     if (isFilled) this.x += 200;
 
     this.updateCoordinates();
+
+    let nodeScreenPos = worldToScreen(this.x, this.y);
+    let sw = this.w * zoomLevel;
+    let sh = this.h * zoomLevel;
+    var btnAttrs = [
+      [0, -30, "#22c55e"],
+      [0, sh + 5, "#38bdf8"],
+      [sw - 48, sh + 5, "#f43f5e"],
+      [sw - 48, -30, "#78716c"],
+    ];
     for (let i = 0; i < this.buttons.length; i++) {
       const button = this.buttons[i];
-      button.position(this.x + btnAttrs[i][0], this.y + btnAttrs[i][1]);
+      button.position(nodeScreenPos.x + btnAttrs[i][0], nodeScreenPos.y + btnAttrs[i][1]);
       button.style("background-color", btnAttrs[i][2]);
     }
   }
@@ -127,23 +127,21 @@ class Draggable {
   }
 
   pressed() {
+    let world = screenToWorld(mouseX, mouseY);
     if (
-      mouseX > this.x &&
-      mouseX < this.x + this.w &&
-      mouseY > this.y &&
-      mouseY < this.y + this.h
+      world.x > this.x &&
+      world.x < this.x + this.w &&
+      world.y > this.y &&
+      world.y < this.y + this.h
     ) {
       this.dragging = true;
-      this.offsetX = this.x - mouseX;
-      this.offsetY = this.y - mouseY;
+      this.offsetX = this.x - world.x;
+      this.offsetY = this.y - world.y;
       if (mouseButton === RIGHT && designMode) {
         this.showButtons();
       }
       select.released();
     }
-
-    this.globOffsetX = this.x - mouseX;
-    this.globOffsetY = this.y - mouseY;
   }
 
   released() {

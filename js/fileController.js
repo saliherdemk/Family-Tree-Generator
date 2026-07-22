@@ -15,7 +15,10 @@ class FileController {
 
   save(type) {
     if (type === "image") {
+      pixelDensity(Math.max(1, Math.ceil(1 / zoomLevel)));
+      redraw();
       saveCanvas(canvas, "My_Family_Tree", "png");
+      pixelDensity(1);
       return;
     }
 
@@ -41,7 +44,6 @@ class FileController {
           )
           .reduce((prev, current) => [...prev, ...current]);
       }
-      console.log(children);
       var newObj = {
         id: node.id,
         name: node.name,

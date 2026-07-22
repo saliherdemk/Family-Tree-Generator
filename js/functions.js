@@ -87,10 +87,7 @@ function closePopup() {
 }
 
 function toggleMenu() {
-  let btns = Object.values(menuBtns).slice(0, -1);
-  btns.forEach((btn) => {
-    btn.classList.toggle("show");
-  });
+  document.getElementById("toolbar")?.classList.toggle("open");
 }
 
 function trigger() {
@@ -122,9 +119,12 @@ function closeInformation() {
 
 function toggleDesignMode() {
   designMode = !designMode;
-  document.getElementById("mode-btn").classList.toggle("mode-off");
-  document.querySelector(".options").classList.toggle("hidden");
-  document.getElementById("github-logo").classList.toggle("hidden");
+  document.getElementById("mode-btn")?.classList.toggle("mode-off");
+  let label = document.getElementById("mode-label");
+  if (label) label.textContent = designMode ? "Design" : "View";
+  document.getElementById("toolbar")?.classList.toggle("hidden");
+  document.getElementById("toolbar")?.classList.remove("open");
+  document.getElementById("github-logo")?.classList.toggle("hidden");
 
   nodes.forEach((node) => {
     node.hideButtons();
@@ -154,4 +154,44 @@ function hexToRgb(hex) {
 
 function rgbToHex(r, g, b) {
   return "#" + ((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1);
+}
+
+function screenToWorld(sx, sy) {
+  return { x: (sx - panX) / zoomLevel, y: (sy - panY) / zoomLevel };
+}
+
+function worldToScreen(wx, wy) {
+  return { x: wx * zoomLevel + panX, y: wy * zoomLevel + panY };
+}
+
+function zoomAtPoint(sx, sy, factor) {
+  let oldZoom = zoomLevel;
+  let newZoom = constrain(zoomLevel * factor, 0.05, 10);
+  if ((oldZoom < 1 && newZoom >= 0.95) || (oldZoom > 1 && newZoom <= 1.05)) {
+    newZoom = 1;
+  }
+  zoomLevel = newZoom;
+  panX = sx - (sx - panX) * (zoomLevel / oldZoom);
+  panY = sy - (sy - panY) * (zoomLevel / oldZoom);
+  updateZoomDisplay();
+}
+
+function zoomIn() {
+  zoomAtPoint(windowWidth / 2, windowHeight / 2, 1.2);
+}
+
+function zoomOut() {
+  zoomAtPoint(windowWidth / 2, windowHeight / 2, 1 / 1.2);
+}
+
+function resetZoom() {
+  zoomLevel = 1;
+  panX = 0;
+  panY = 0;
+  updateZoomDisplay();
+}
+
+function updateZoomDisplay() {
+  let el = document.getElementById("zoom-display");
+  if (el) el.textContent = Math.round(zoomLevel * 100) + "%";
 }

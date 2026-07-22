@@ -68,7 +68,8 @@ class LinkUp {
   }
 
   over() {
-    if (sqrt(sq(this.x - mouseX) + sq(this.y - mouseY)) < this.r / 2) {
+    let world = screenToWorld(mouseX, mouseY);
+    if (sqrt(sq(this.x - world.x) + sq(this.y - world.y)) < this.r / 2) {
       this.rollover = true;
     } else {
       this.rollover = false;
@@ -154,7 +155,8 @@ class LinkUp {
 
   draw() {
     if (this.isActive) {
-      line(this.x, this.y, mouseX, mouseY);
+      let world = screenToWorld(mouseX, mouseY);
+      line(this.x, this.y, world.x, world.y);
     }
     circle(this.x, this.y, this.r);
   }
