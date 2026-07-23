@@ -38,9 +38,9 @@ class FileController {
           .map((link) =>
             link.linkUp
               ? link.linkUp?.children.filter(
-                  (id) => this.getById(id) !== undefined
+                  (id) => this.getById(id) !== undefined,
                 )
-              : []
+              : [],
           )
           .reduce((prev, current) => [...prev, ...current]);
       }
@@ -88,7 +88,7 @@ class FileController {
         element.lived,
         element.boxColor,
         element.strokeColor,
-        element.textColor
+        element.textColor,
       );
       this.addNewNode(newNode);
     }
@@ -118,7 +118,7 @@ class FileController {
       const element = nodes[i];
       element.children.forEach((childId) => {
         let spouse = element.spouses.find((spouse) =>
-          spouse.children.includes(childId)
+          spouse.children.includes(childId),
         );
         let link = element.links.find((lnk) => lnk.source === spouse);
         if (link) {
@@ -146,7 +146,9 @@ class FileController {
     this.createChildrenRelations();
     nodes.map(
       (node) =>
-        (node.children = node.children.filter((child) => child instanceof Node))
+        (node.children = node.children.filter(
+          (child) => child instanceof Node,
+        )),
     );
   }
 

@@ -17,6 +17,19 @@ var panDragStartMouseY = 0;
 var panDragStartPanX = 0;
 var panDragStartPanY = 0;
 
+var isTouching = false;
+var touchPanActive = false;
+var touchDragActive = false;
+var touchedNodeRef = null;
+var lastTapTime = 0;
+var lastTapNode = null;
+var longPressTimer = null;
+var longPressTriggered = false;
+var pinchStartDist = 0;
+var pinchStartZoom = 1;
+var touchStartX = 0;
+var touchStartY = 0;
+
 const designBtn = document.getElementById("mode-btn");
 const nameInp = document.getElementById("name-inp");
 const dateInp = document.getElementById("date-inp");

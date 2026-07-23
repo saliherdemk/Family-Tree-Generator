@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <meta name="description" content="Family Tree Generator" />
     <meta name="keywords" content="Family, Tree, Generator" />
     <link rel="stylesheet" href="style.css" />
@@ -157,7 +160,7 @@
         var sample = new URLSearchParams(window.location.search).get("sample");
         if (sample) {
           document.write(
-            '<script src="samples/datas/' + sample + '.js"><\/script>'
+            '<script src="samples/datas/' + sample + '.js"><\/script>',
           );
         }
       })();

@@ -85,7 +85,7 @@ class Node extends Draggable {
       this.y - 200,
       "Unknown",
       [],
-      [this]
+      [this],
     );
 
     let parent2 = parent1.addSpouse();
@@ -104,7 +104,7 @@ class Node extends Draggable {
           this.y,
           "Unknown",
           [this],
-          []
+          [],
         );
     !sp && this.spouses.push(node);
 

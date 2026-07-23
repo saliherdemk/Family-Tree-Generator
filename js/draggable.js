@@ -92,7 +92,7 @@ class Draggable {
 
   update() {
     let isFilled = nodes.find(
-      (node) => dist(node.x, node.y, this.x, this.y) < 20 && node !== this
+      (node) => dist(node.x, node.y, this.x, this.y) < 20 && node !== this,
     );
     if (isFilled) this.x += 200;
 
@@ -109,7 +109,10 @@ class Draggable {
     ];
     for (let i = 0; i < this.buttons.length; i++) {
       const button = this.buttons[i];
-      button.position(nodeScreenPos.x + btnAttrs[i][0], nodeScreenPos.y + btnAttrs[i][1]);
+      button.position(
+        nodeScreenPos.x + btnAttrs[i][0],
+        nodeScreenPos.y + btnAttrs[i][1],
+      );
       button.style("background-color", btnAttrs[i][2]);
     }
   }

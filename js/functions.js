@@ -74,7 +74,7 @@ function handlePopupInput() {
     dateInp.value,
     boxColorInp.value,
     strokeColorInp.value,
-    textColorInp.value
+    textColorInp.value,
   );
   closePopup();
 }
