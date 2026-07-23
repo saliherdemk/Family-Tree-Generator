@@ -143,7 +143,7 @@ function touchStarted() {
     lastTapTime = 0;
     lastTapNode = null;
     touchedNodeRef = null;
-    return;
+    return false;
   }
   lastTapTime = now;
   lastTapNode = touchedNodeRef;
