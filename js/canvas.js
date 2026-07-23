@@ -107,7 +107,7 @@ function touchStarted() {
     touchPanActive = false;
     touchDragActive = false;
     clearTimeout(longPressTimer);
-    return false;
+    return;
   }
 
   let tx = mouseX;
@@ -143,7 +143,7 @@ function touchStarted() {
     lastTapTime = 0;
     lastTapNode = null;
     touchedNodeRef = null;
-    return false;
+    return;
   }
   lastTapTime = now;
   lastTapNode = touchedNodeRef;
@@ -159,16 +159,17 @@ function touchStarted() {
   }
 
   if (!touchedNodeRef || !designMode) {
+    let el = document.elementFromPoint(tx, ty);
+    if (el && el.tagName === "CANVAS") {
+      document.getElementById("toolbar")?.classList.remove("open");
+    }
     touchPanActive = true;
     canvasDragging = true;
     panDragStartMouseX = tx;
     panDragStartMouseY = ty;
     panDragStartPanX = panX;
     panDragStartPanY = panY;
-    document.getElementById("toolbar")?.classList.remove("open");
   }
-
-  return false;
 }
 
 function touchMoved() {
@@ -192,7 +193,7 @@ function touchMoved() {
     panY = midY - (midY - panY) * (zoomLevel / oldZoom);
     updateZoomDisplay();
 
-    return false;
+    return;
   }
 
   if (touches.length === 1) {
@@ -217,8 +218,6 @@ function touchMoved() {
       }
     }
   }
-
-  return false;
 }
 
 function touchEnded() {
@@ -243,12 +242,13 @@ function touchEnded() {
     canvasDragging = false;
     touchedNodeRef = null;
     longPressTriggered = false;
-    isTouching = false;
 
     releasedAction(nodes);
     releasedAction(linkUps);
     select.released();
-  }
 
-  return false;
+    setTimeout(() => {
+      isTouching = false;
+    }, 0);
+  }
 }
