@@ -10,13 +10,6 @@
     <title>Family Tree Generator</title>
   </head>
   <body>
-    <a
-      href="https://github.com/saliherdemk/Family-Tree-Generator"
-      target="_blank"
-    >
-      <img src="img/githubLogo.png" id="github-logo" alt="" />
-    </a>
-
     <div class="toolbar" id="toolbar">
       <input
         id="fileid"
@@ -107,14 +100,23 @@
       </div>
     </div>
 
-    <button id="mode-btn" onclick="toggleDesignMode()">
-      <span id="mode-label">Design</span>
-    </button>
-
-    <div id="zoom-controls">
-      <button id="zoom-in-btn" onclick="zoomIn()">+</button>
-      <span id="zoom-display">100%</span>
-      <button id="zoom-out-btn" onclick="zoomOut()">&#8722;</button>
+    <div id="bottom-right-controls">
+      <div id="zoom-controls">
+        <button id="zoom-in-btn" onclick="zoomIn()">+</button>
+        <span id="zoom-display">100%</span>
+        <button id="zoom-out-btn" onclick="zoomOut()">&#8722;</button>
+      </div>
+      <div id="bottom-row">
+        <a
+          href="https://github.com/saliherdemk/Family-Tree-Generator"
+          target="_blank"
+        >
+          <img src="img/github.svg" id="github-logo" alt="" />
+        </a>
+        <button id="mode-btn" onclick="toggleDesignMode()">
+          <span id="mode-label">Design</span>
+        </button>
+      </div>
     </div>
 
     <div class="info-container" onclick="closeInformation()">
